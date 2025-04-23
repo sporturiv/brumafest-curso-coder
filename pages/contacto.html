@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <h2>Bruma Fest</h2>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./programacion.html">Programación</a></li>
+                    <li><a href="./artistas.html">Artistas</a></li>
+                    <li><a href="./entradas.html">Entradas</a></li>
+                    <li><a href="#" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido -->
+    <main class="contacto">
+        <section class="informacion">
+            <h1>Contacto</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt illo exercitationem accusamus ut culpa quis, rem dolore iusto vero omnis. Suscipit voluptatum reiciendis assumenda ducimus voluptatibus ex quidem optio est?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum voluptates vero neque? Ut nobis, at quisquam facere placeat atque ullam incidunt nisi non, deleniti sed. Est voluptates maxime exercitationem distinctio.</p>
+        </section>
+
+        <section class="formulario">
+            <form>
+                <h2>Escribinos tu consulta</h2>
+                <div>
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresá tu nombre y apellido" required>
+                </div>    
+                <div>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplodemail@mail.com" required>
+                </div>
+                <div>  
+                    <label for="asunto">Asunto:</label>
+                    <select id="asunto" name="asunto" required>
+                        <option value="" disabled selected>Seleccioná un asunto</option>
+                        <option value="entradas">Consulta sobre entradas</option>
+                        <option value="programacion">Consulta sobre programación</option>
+                        <option value="general">Consulta general</option>
+                    </select>
+                </div>  
+                <div> 
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribí aquí tu mensaje..." required></textarea>
+                </div>
+                <button type="submit">Enviar consulta</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <h2 class="footer-title">Bruma Fest</h2>
+            
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>Festival</h3>
+                    <ul>
+                        <li><a href="programacion.html">Programación</a></li>
+                        <li><a href="artistas.html">Artistas</a></li>
+                        <li><a href="entradas.html">Entradas</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Ayuda</h3>
+                    <ul>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="#">Información</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column redes">
+                    <h3>Redes sociales</h3>
+                    <div class="redes-iconos">
+                        <a href="#"><img src="../medios/iconos/spotify.png" alt="Spotify"></a>
+                        <a href="#"><img src="../medios/iconos/x.png" alt="X"></a>
+                        <a href="#"><img src="../medios/iconos/instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="../medios/iconos/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="../medios/iconos/tiktok.png" alt="TikTok"></a>
+                        <a href="#"><img src="../medios/iconos/youtube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+
+                <div class="footer-column newsletter">
+                    <h3>Suscribite a nuestro newsletter</h3>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" placeholder="Ingresá tu correo electrónico">
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Políticas de Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+</html>
