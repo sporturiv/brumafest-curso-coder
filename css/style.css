@@ -168,6 +168,14 @@ section h2 {
     margin-bottom: 1.5rem;
 }
 
+.fondo-contenedor {
+    background-color:antiquewhite ;
+    width: 100vw;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 1.5rem 0;
+}
+
 /* Secciones movil */
 @media (max-width: 767px) {
     section {
@@ -388,6 +396,17 @@ section h2 {
     }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .fechas button {
+        width: 100%;
+    }
+
+    .fechas-container {
+        gap: 1rem;
+        margin: 0
+    }
+}
+
 /* Programación */
 .banner img {
     width: 100%;
@@ -400,15 +419,15 @@ section h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 24px;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .escenario {
     background-color:#640D5F;
     color: #ffffff;
-    padding: 24px;
+    padding: 1rem;
     border-radius: 8px;
-    width: 100%;
 }
 
 .escenario h4 {
@@ -416,6 +435,7 @@ section h2 {
 }
 .escenario ul {
     list-style: none;
+    padding: 0;
 }
 
 .escenario li {
@@ -446,7 +466,7 @@ section h2 {
 }
   
 .artista {
-    background-color: #640D5F;
+    background-color:antiquewhite ;
     border-radius: 10px;
     padding: 1.5rem;
     flex: 1 1 calc(33% - 1.5rem);
