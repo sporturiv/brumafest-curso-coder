@@ -31,8 +31,8 @@ p{
     font-size: 1.1rem;
 }
 
-@media (max-width: 540px) {
-
+/* Títulos movil */
+@media (max-width: 575px) {
     h1 { font-size: 3rem; }
     h2 { font-size: 2.5rem; }
     h3 { font-size: 2rem; }
@@ -60,13 +60,11 @@ button {
 }
 
 button:hover {
-    transform: scale(1.02);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.2s ease;
     cursor: pointer;
 }
 
-/* Encabezado */
+/* Header */
 header {
     background-color: #640D5F;
     color: #ffffff;
@@ -109,7 +107,23 @@ header {
     color: white;
 }
 
-@media (max-width: 540px) {
+/*Header tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header-container {
+        padding: 0.2rem 6rem;
+    }
+
+    .header-container h2 {
+        font-size: 2rem;
+    }
+
+    .navbar a {
+        font-size: 1.1rem;
+    }
+}
+
+/* Header movil */
+@media (max-width: 767px) {
 
     .header-container {
       flex-wrap: wrap;
@@ -142,11 +156,6 @@ header {
       padding: 1rem;
       font-size: 1.2rem;
     }
-  
-    /* Mostrar menú cuando el checkbox está chequeado */
-    .menu-toggle:checked + .menu-icon + .navbar {
-      display: flex;
-    }
 }
 
 /* Secciones */
@@ -159,9 +168,23 @@ section h2 {
     margin-bottom: 1.5rem;
 }
 
+/* Secciones movil */
+@media (max-width: 767px) {
+    section {
+        margin: 2.5rem 1.5rem;
+    }
+}
+
+/*Secciones tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    section {
+        margin: 4rem 6rem;
+    }
+}
+
 /* Index */
 .destacado {
-    background: linear-gradient(rgba(75, 42, 106, 0.6), rgba(75, 42, 106, 0.6)), url('../medios/fotos/banner-principal.jpg');
+    background-image: url('../medios/fotos/banner-principal.jpg');
     height: 60vh;
     background-size: cover;
     background-position: center;
@@ -183,7 +206,7 @@ section h2 {
 }
 
 .fecha {
-    background: linear-gradient(135deg, #ff4ecb, #8c52ff);
+    background-color: #640D5F;
     border-radius: 8px;
     color: white;
     text-shadow: #000000 1px 1px ;
@@ -194,7 +217,6 @@ section h2 {
 }
 
 .fecha:hover {
-    transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
   }
 
@@ -223,7 +245,7 @@ section h2 {
 .galeria-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 320px); /* podés ajustar la altura */
+    grid-template-rows: repeat(2, 320px);
     gap: 1rem;
     margin: 2.5rem 0;
 }
@@ -249,7 +271,7 @@ section h2 {
 }
   
 .foto5 {
-    grid-column: 2 / 4; /* ocupa columnas 2 y 3 */
+    grid-column: 2 / 4; /* ocupa 2 columnas */
     grid-row: 2 / 3;
 }
   
@@ -265,12 +287,14 @@ section h2 {
     border-radius: 8px;
 }
 
-.galeria-grid img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+.ver-mas {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #640D5F;
 }
 
-@media (max-width: 540px) {
+/* Index movil */
+@media (max-width: 767px) {
     /* Hero */
     .destacado {
       height: 70vh;
@@ -287,11 +311,6 @@ section h2 {
       width: 80%;
       max-width: 300px;
       margin-top: 1rem;
-    }
-  
-    /* Secciones */
-    section {
-      margin: 2.5rem 1.5rem;
     }
   
     /* Fechas */
@@ -364,17 +383,12 @@ section h2 {
   
     .ver-mas {
       display: block;
-      margin-top: 1rem;
-      text-align: right;
-      font-weight: bold;
       color: #640D5F;
       font-size: 1rem;
     }
 }
-  
 
 /* Programación */
-
 .banner img {
     width: 100%;
     height: 55vh;
@@ -390,7 +404,7 @@ section h2 {
 }
 
 .escenario {
-    background-color:#D91656;
+    background-color:#640D5F;
     color: #ffffff;
     padding: 24px;
     border-radius: 8px;
@@ -405,17 +419,18 @@ section h2 {
 }
 
 .escenario li {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 12px;
     font-weight: bold;
+    padding: 0.3rem 0.5rem;
 }
 
 .escenario ul li:nth-child(even) {
-    background-color:blueviolet;
+    background-color:darkslateblue;
+    border-radius: 4px;
 }
 
 /* Artistas */
-
 .artistas-dia-container{
     background-color:darkslateblue ;
     padding: 2rem 2rem;
@@ -431,20 +446,14 @@ section h2 {
 }
   
 .artista {
-    background: linear-gradient(135deg, #ff4ecb, #8c52ff);
+    background-color: #640D5F;
     border-radius: 10px;
     padding: 1.5rem;
     flex: 1 1 calc(33% - 1.5rem);
     text-align: left;
-    transition: transform 0.3s, box-shadow 0.3s;
     color: white;
     text-shadow: #000000 1px 1px ;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.artista:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .artista p {
@@ -495,11 +504,11 @@ section h2 {
     width: 100%;
     max-width: 80px;
     max-height: 80px;
-    aspect-ratio: 1 / 1; /* cuadrado perfecto */
-    object-fit: cover; /* recorta y escala la imagen */
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 6px;
     margin-bottom: 0.5rem;
-    border-style: solid 1px #000 ;
+    border-style: solid 1px #000000;
 }
 
 .artista-mini p {
@@ -533,7 +542,7 @@ section h2 {
 }
 
 .entrada {
-    background: linear-gradient(135deg, #ff4ecb, #8c52ff);
+    background-color: #640D5F;
     border-radius: 10px;
     color: white;
     text-shadow: #000000 1px 1px ;
@@ -595,7 +604,6 @@ details p {
 }
 
 /* Contacto */
-
 .formulario {
     padding: 48px;
     border-radius: 8px;
@@ -719,8 +727,28 @@ details p {
     color: #ffffff;
 }
 
-/* Footer responsivo */
-@media (max-width: 540px) {
+/* Footer tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .footer {
+        padding: 2rem 6rem;
+    }
+
+    .footer-column.festival,
+    .footer-column.ayuda {
+        width: calc(50% - 2rem);
+        order: 1;
+    }
+
+    .footer-column.newsletter,
+    .footer-column.redes {
+        width: calc(50% - 2rem);
+        order: 2;
+        margin-top: 2rem;
+    }
+}
+
+/* Footer movil */
+@media (max-width: 767px) {
     .footer {
         padding: 2rem 1.5rem;
     }
@@ -742,7 +770,7 @@ details p {
 
     .footer-column.festival,
     .footer-column.ayuda {
-        width: calc(50% - 0.75rem); /* 2 columnas en una fila */
+        width: calc(50% - 0.75rem);
         order: 1;
     }
 
@@ -776,5 +804,6 @@ details p {
 
     .footer-bottom a {
         font-size: 0.7rem;
+    }
 
 }
