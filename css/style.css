@@ -50,9 +50,9 @@ input{
 }
 
 button {
-    background-color: #D91656;
+    background-color: #ffb300;
     font-weight: bold;
-    color: #ffffff;
+    color: #000000;
     border: none;
     border-radius: 8px;
     padding: 12px 24px;
@@ -205,6 +205,11 @@ section h2 {
     text-shadow: #000000 2px 2px ;
 }
 
+.destacado button {
+    background-color: deeppink;
+    color: #ffffff;
+}
+
 .fechas-container {
     display: flex;
     flex-direction: row;
@@ -239,8 +244,6 @@ section h2 {
 
 .fechas button {
     width: 50%;
-    background-color: #ffb300;
-    color: #000000 ;
 }
 
 .mapa {
@@ -591,8 +594,6 @@ section h2 {
 .entradas button {
     margin-top: 40px;
     width: 100%;
-    background-color: #ffb300;
-    color: #000000;
 }
 
 .entradas-datos{
@@ -608,32 +609,65 @@ section h2 {
     flex-direction: column;
 }
 
-details {
-    background-color: aliceblue;
-    padding: 24px 32px;
-    border-radius: 4px;
+.preguntas-frecuentes h2 {
+    margin-bottom: 0 ;
 }
 
-summary {
+.preguntas-frecuentes .accordion-item {
+    margin-bottom: 0 !important;
+  }
+
+.preguntas-frecuentes .accordion {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.accordion-header button {
+    padding: 1rem 1.25rem;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.accordion-header button:hover {
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.accordion-body {
     font-size: 1.2rem;
-    font-weight: bold;
+    padding: 16px 48px;
 }
 
-details p {
-    margin-top: 12px;
+
+
+@media (max-width: 767px) {
+
+    .accordion-header button {
+        padding: 24px 16px;
+        font-size: 1.5rem;
+    }
+
+    .accordion-body {
+        font-size: 0.9rem;
+        padding: 16px;
+    }
 }
 
 /* Contacto */
 .formulario {
-    padding: 48px;
+    padding: 60px;
     border-radius: 8px;
     width: 50%;
+    background-color: darkslateblue;
 }
 
 .contacto form {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 2rem;
+    color: #ffffff ;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 
@@ -642,7 +676,7 @@ details p {
     padding: 8px 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-top: 8px;
+    margin-top: 12px;
 }
 
 .contacto select{
