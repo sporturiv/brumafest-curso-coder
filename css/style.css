@@ -34,7 +34,7 @@ p{
 /* Títulos movil */
 @media (max-width: 575px) {
     h1 { font-size: 3rem; }
-    h2 { font-size: 2.5rem; }
+    h2 { font-size: 2.2rem; }
     h3 { font-size: 2rem; }
     h4 { font-size: 1.5rem; }
     h5 { font-size: 1.2rem; }
@@ -110,7 +110,7 @@ header {
 /*Header tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
     .header-container {
-        padding: 0.2rem 6rem;
+        padding: 0.2rem 4rem;
     }
 
     .header-container h2 {
@@ -186,7 +186,7 @@ section h2 {
 /*Secciones tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
     section {
-        margin: 4rem 6rem;
+        margin: 4rem 4rem;
     }
 }
 
@@ -638,8 +638,6 @@ section h2 {
     padding: 16px 48px;
 }
 
-
-
 @media (max-width: 767px) {
 
     .accordion-header button {
@@ -654,10 +652,13 @@ section h2 {
 }
 
 /* Contacto */
+
+.contacto {
+    margin-bottom: 6rem;
+}
+
 .formulario {
-    padding: 60px;
-    border-radius: 8px;
-    width: 50%;
+    border-radius: 10px;
     background-color: darkslateblue;
 }
 
@@ -669,7 +670,6 @@ section h2 {
     font-weight: bold;
     font-size: 1.2rem;
 }
-
 
 .contacto input, select, textarea {
     width: 100%;
@@ -690,6 +690,48 @@ section h2 {
     font-size: 1rem;
 }
 
+/* Contacto en tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .formulario {
+        padding: 48px;
+    }
+}
+
+/* Contacto en móvil */
+@media (max-width: 767px) {
+
+    .contacto {
+        margin-bottom: 3rem;
+    }
+
+    .contacto form {
+        font-size: 1rem;
+        gap: 1.2rem;
+    }
+
+    .formulario form h2 {
+        margin: 0 0 8px;
+    }
+    
+    .contacto textarea {
+        height: 100px;
+    }
+
+    .formulario {
+        padding: 24px 16px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .formulario {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 60px;
+    }
+}
 
 /* Footer */
 .footer {
@@ -784,7 +826,7 @@ section h2 {
 /* Footer tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
     .footer {
-        padding: 2rem 6rem;
+        padding: 2rem 4rem;
     }
 
     .footer-column.festival,
