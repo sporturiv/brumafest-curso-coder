@@ -131,8 +131,7 @@ section h2 {
 
 .fondo-contenedor {
     background-color:rgb(222, 218, 255);
-    width: 100vw;
-    margin: 0;
+    width: 100%;
     box-sizing: border-box;
     padding: 1.5rem 0;
 }
@@ -737,6 +736,7 @@ section h2 {
     }
 }
 
+/* Ajustes del formulario en escritorio */
 @media (min-width: 992px) {
 
     .formulario {
@@ -813,7 +813,6 @@ section h2 {
 }
 
 /* Newsletter */
-
 .newsletter input {
     width: 100%;
     padding: 8px 16px;
@@ -915,5 +914,4 @@ section h2 {
     .footer-bottom a {
         font-size: 0.7rem;
     }
-
 }
