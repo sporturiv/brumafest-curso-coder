@@ -418,17 +418,18 @@ section h2 {
     border-radius: 8px;
 }
 
+#carrusel-sabado,
+#carrusel-domingo {
+  display: none;
+}
+
 .escenario-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 1rem;
-    flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .escenario {
-    background-color:#640D5F;
-    color: #ffffff;
+    background: #640D5F;
+    color: #fff;
     padding: 1rem;
     border-radius: 8px;
 }
@@ -453,12 +454,60 @@ section h2 {
     border-radius: 4px;
 }
 
+/* Programación en movil */
+.escenario-container {
+    display: none;
+}
+
+#carrusel-sabado,
+#carrusel-domingo {
+    display: block;
+}
+  
+/* Programación en tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #carrusel-sabado,
+    #carrusel-domingo {
+      display: none;
+    }
+  
+    .escenario-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 1rem;
+    }
+
+    .escenario-container .principal {
+      grid-column: 1 / 3;
+    }
+}
+  
+/* Programación en escritorio*/
+@media (min-width: 1024px) {
+    #carrusel-sabado,
+    #carrusel-domingo {
+      display: none;
+    }
+  
+    .escenario-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: auto;
+      gap: 1rem;
+    }
+    
+    .escenario-container .principal {
+      grid-column: auto;
+    }
+}
+
 /* Artistas */
 .artistas-dia-container{
-    background-color:darkslateblue ;
-    padding: 2rem 2rem;
-    border-radius: 10px;
-    color: #ffffff ;
+    background-color: darkslateblue;
+    color: #ffffff;
+    margin: 0;
+    padding: 3rem 10rem;
 }
   
 .artistas-destacados {
@@ -469,7 +518,7 @@ section h2 {
 }
   
 .artista {
-    background-color:antiquewhite ;
+    background-color:#640D5F ;
     border-radius: 10px;
     padding: 1.5rem;
     flex: 1 1 calc(33% - 1.5rem);
