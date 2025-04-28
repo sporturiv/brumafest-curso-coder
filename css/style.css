@@ -169,7 +169,7 @@ section h2 {
 }
 
 .fondo-contenedor {
-    background-color:antiquewhite ;
+    background-color:rgb(222, 218, 255);
     width: 100vw;
     margin: 0;
     box-sizing: border-box;
@@ -206,7 +206,7 @@ section h2 {
 }
 
 .destacado button {
-    background-color: deeppink;
+    background-color: rgb(217, 15, 123);
     color: #ffffff;
 }
 
@@ -219,7 +219,7 @@ section h2 {
 }
 
 .fecha {
-    background-color: #640D5F;
+    background-color: darkslateblue;
     border-radius: 8px;
     color: white;
     text-shadow: #000000 1px 1px ;
@@ -428,7 +428,7 @@ section h2 {
 }
 
 .escenario {
-    background: #640D5F;
+    background-color: darkslateblue;
     color: #fff;
     padding: 1rem;
     border-radius: 8px;
@@ -450,7 +450,7 @@ section h2 {
 }
 
 .escenario ul li:nth-child(even) {
-    background-color:darkslateblue;
+    background-color: rgb(102, 89, 180);
     border-radius: 4px;
 }
 
@@ -503,11 +503,13 @@ section h2 {
 }
 
 /* Artistas */
-.artistas-dia-container{
-    background-color: darkslateblue;
-    color: #ffffff;
+.artistas-dia-container {
     margin: 0;
     padding: 3rem 10rem;
+}
+
+.domingo {
+    background-color:rgb(222, 218, 255);
 }
   
 .artistas-destacados {
@@ -518,7 +520,7 @@ section h2 {
 }
   
 .artista {
-    background-color:#640D5F ;
+    background-color: darkslateblue ;
     border-radius: 10px;
     padding: 1.5rem;
     flex: 1 1 calc(33% - 1.5rem);
@@ -555,8 +557,6 @@ section h2 {
     gap: 20px;
     align-items: center;
     width: 100%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    color: #ffffff ;
 }
 
 .artista-mini-datos {
@@ -614,7 +614,7 @@ section h2 {
 }
 
 .entrada {
-    background-color: #640D5F;
+    background-color: darkslateblue;
     border-radius: 10px;
     color: white;
     text-shadow: #000000 1px 1px ;
