@@ -748,7 +748,7 @@ section h2 {
 }
 
 /* Footer */
-.footer {
+footer {
     background-color: #640D5F;
     color: #ffffff;
     padding: 3rem 10rem;
@@ -838,7 +838,7 @@ section h2 {
 
 /* Footer tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
-    .footer {
+    footer {
         padding: 2rem 4rem;
     }
 
@@ -858,7 +858,7 @@ section h2 {
 
 /* Footer movil */
 @media (max-width: 767px) {
-    .footer {
+    footer {
         padding: 2rem 1.5rem;
     }
 
