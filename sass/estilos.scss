@@ -1,7 +1,16 @@
-@import url(./partials/_header&footer.scss);
+//variables
+@import url(./partials/_variables-y-estilos-generales.scss);
+
+//header&footer
+@import url(./partials/_header-y-footer.scss);
+
+//páginas
 @import url(./partials/_index.scss);
-@import url(./partials/_artistas.scss);
 @import url(./partials/_programacion.scss);
+@import url(./partials/_artistas.scss);
 @import url(./partials/_entradas.scss);
 @import url(./partials/_contacto.scss);
+
+//mediaq
 @import url(./partials/_mediaq.scss);
+
