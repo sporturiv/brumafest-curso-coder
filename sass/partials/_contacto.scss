@@ -1,3 +1,7 @@
+//Variables y estilos generales
+@use "partials/variables" as *;
+@use "partials/base" as *;
+
 //CONTACTO
 .contacto {
     margin-bottom: 6rem;
@@ -73,7 +77,6 @@
                 transition: background-color 0.3s, box-shadow 0.3s;
         
                 &:hover {
-                    background-color: lighten($color-blanco, 10%);
                     box-shadow: $sombra-hover;
                 }
             }

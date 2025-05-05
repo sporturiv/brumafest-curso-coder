@@ -1,3 +1,7 @@
+//Variables y estilos generales
+@use "partials/variables" as *;
+@use "partials/base" as *;
+
 //TÍTULOS Y PÁRRAFOS
 //Móvil
 @media (max-width: 575px) {
@@ -147,7 +151,7 @@
 @media (min-width: 768px) and (max-width: 1024px) {
     .fechas-container {
         gap: 1rem;
-        margin: 0
+        margin: 0 ;
 
         button {
             width: 100%;

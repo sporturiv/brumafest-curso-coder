@@ -1,0 +1,69 @@
+//Variables y estilos generales
+@use "partials/variables" as *;
+
+//Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//Estilos tipografía
+h1, h2, h3, h4, h5, h6 {
+  font-family: $tipografia-titulos;
+}
+
+h1 { font-size: 4rem; }
+h2 { font-size: 3rem; }
+h3 { font-size: 2.5rem; }
+h4 { font-size: 2rem; }
+h5 { font-size: 1.5rem; }
+h6 { font-size: 1.2rem; }
+
+p {
+  font-size: 1.1rem;
+}
+
+//Componentes
+input {
+  font-size: 1rem;
+}
+
+button {
+  background-color: $color-secundario;
+  font-weight: bold;
+  color: $color-negro;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+
+  &:hover {
+    box-shadow: $sombra-hover;
+    cursor: pointer;
+  }
+}
+
+//Body y secciones
+body {
+  font-family: $tipografia-principal;
+  color: $color-negro;
+  background-color: $color-fondo;
+  text-align: start;
+}
+
+section {
+  text-align: start;
+  margin: 6rem 10rem;
+
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.fondo-contenedor {
+  background-color: $color-fondo-violeta;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem 0;
+}

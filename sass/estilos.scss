@@ -1,18 +1,16 @@
-//Importación de tipografías
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700&display=swap');
-
 //Variables y estilos generales
-@import "partials/variables-y-estilos-generales";
+@use "partials/variables" as *;
+@use "partials/base" as *;
 
 //Header y footer
-@import "partials/header-y-footer";
+@use "partials/header-y-footer" as *;
 
 //Páginas
-@import "partials/index";
-@import "partials/programacion";
-@import "partials/artistas";
-@import "partials/entradas";
-@import "partials/contacto";
+@use "partials/index" as *;
+@use "partials/programacion" as *;
+@use "partials/artistas" as *;
+@use "partials/entradas" as *;
+@use "partials/contacto" as *;
 
 //MediaQ
-@import "partials/mediaq";
+@use "partials/mediaq" as *;

@@ -1,3 +1,7 @@
+//Variables y estilos generales
+@use "partials/variables" as *;
+@use "partials/base" as *;
+
 //INDEX
 .index {
     .destacado {
