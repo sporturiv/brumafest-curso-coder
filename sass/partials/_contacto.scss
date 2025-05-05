@@ -1,0 +1,81 @@
+.contacto {
+    margin-bottom: 6rem;
+  
+    section {
+        h1 {
+            font-size: 4rem;
+            font-family: $tipografia-titulos;
+            margin-bottom: 1.5rem;
+        }
+    
+        p {
+            font-size: 1.1rem;
+            font-family: $tipografia-principal;
+            max-width: 800px;
+        }
+    }
+  
+    .formulario {
+        border-radius: 10px;
+        background-color: $color-tarjetas;
+        padding: 2rem;
+        margin-top: 2rem;
+    
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            color: $color-blanco;
+            font-family: $tipografia-principal;
+            font-weight: bold;
+            font-size: 1.2rem;
+    
+            h2 {
+                font-size: 3rem;
+                font-family: $tipografia-titulos;
+                margin-bottom: 1rem;
+            }
+    
+            div {
+                display: flex;
+                flex-direction: column;
+        
+                label {
+                    margin-bottom: 0.5rem;
+                }
+        
+                input, select, textarea {
+                    width: 100%;
+                    padding: 8px 16px;
+                    border: 1px solid $color-bordes;
+                    border-radius: 4px;
+                    margin-top: 12px;
+                    font-size: 1rem;
+                    font-family: $tipografia-principal;
+                }
+        
+                textarea {
+                    height: 120px;
+                }
+            }
+    
+            button[type="submit"] {
+                align-self: flex-start;
+                background-color: $color-blanco;
+                color: $color-tarjetas;
+                font-weight: bold;
+                border: none;
+                border-radius: 4px;
+                padding: 0.75rem 1.5rem;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: background-color 0.3s, box-shadow 0.3s;
+        
+                &:hover {
+                    background-color: lighten($color-blanco, 10%);
+                    box-shadow: $sombra-hover;
+                }
+            }
+        }
+    }
+}
