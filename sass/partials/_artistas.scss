@@ -6,94 +6,105 @@
 .artistas-dia-container {
     margin: 0;
     padding: 3rem 10rem;
+}
 
-    .domingo {
-        background-color: $color-fondo-violeta ;
-    }
+.domingo {
+    background-color: $color-fondo-violeta ;
+}
 
-    .artistas-destacados {
-        display: flex;
-        gap: 2rem;
-        flex-wrap: wrap;
-        margin-bottom: 2rem;
+.artistas-destacados {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
 
-        .artista {
-            background-color: $color-tarjetas ;
-            border-radius: 10px;
-            padding: 1.5rem;
-            flex: 1 1 calc(33% - 1.5rem);
-            text-align: left;
-            color: $color-blanco;
-            text-shadow: $color-negro 1px 1px ;
-            box-shadow: $sombra-baja;
+    .artista {
+        background-color: $color-tarjetas ;
+        border-radius: 10px;
+        padding: 1.5rem;
+        flex: 1 1 calc(33% - 1.5rem);
+        text-align: left;
+        color: $color-blanco;
+        text-shadow: $color-negro 1px 1px ;
+        box-shadow: $sombra-baja;
 
-            p {
-                margin-bottom: 12px;
-            }
+        p {
+            margin-bottom: 12px;
+        }
 
-            .imagen {
-                width: 100%;
-                aspect-ratio: 1.5 / 1;
-                object-fit: cover; /* recorta y escala la imagen */
-                border-radius: 6px;
-                margin-bottom: 1rem;
+        .imagen {
+            width: 100%;
+            aspect-ratio: 1.5 / 1;
+            object-fit: cover; /* recorta y escala la imagen */
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .redes-iconos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+
+            img {
+                width: 32px;
+                height: 32px;
             }
         }
     }
+}
 
-    .artistas-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-        padding: 2rem 0;
-        justify-items:left;
-        display: grid;
+.artistas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 2rem 0;
+    justify-items:left;
+    display: grid;
 
-        .artista-mini {
+    .artista-mini {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        width: 100%;
+
+        .artista-mini-datos {
             display: flex;
-            flex-direction: row;
-            gap: 20px;
-            align-items: center;
+            flex-direction: column;
+            text-align: start;
             width: 100%;
+            gap: 8px;
 
-            .artista-mini-datos {
-                display: flex;
-                flex-direction: column;
-                text-align: start;
-                width: 100%;
-                gap: 8px;
-
-                h4 {
-                    font-family: 'Inter', sans-serif;
-                    font-size: 1.2rem;
-                }
+            h4 {
+                font-family: 'Inter', sans-serif;
+                font-size: 1.2rem;
             }
+        }
+
+        img {
+            width: 100%;
+            max-width: 80px;
+            max-height: 80px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+            border-style: solid 1px $color-negro;
+        }
+
+        p {
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+
+        .redes {
+            display: flex;
+            justify-content: left;
+            gap: 0.4rem;
 
             img {
-                width: 100%;
-                max-width: 80px;
-                max-height: 80px;
-                aspect-ratio: 1 / 1;
-                object-fit: cover;
-                border-radius: 6px;
-                margin-bottom: 0.5rem;
-                border-style: solid 1px $color-negro;
-            }
-
-            p {
-                font-weight: bold;
-                margin: 0.5rem 0;
-            }
-
-            .redes {
-                display: flex;
-                justify-content: left;
-                gap: 0.4rem;
-
-                img {
-                    width: 32px;
-                    height: 32px;
-                }
+                width: 32px;
+                height: 32px;
             }
         }
     }

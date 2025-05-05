@@ -3,46 +3,55 @@
 @use "partials/base" as *;
 
 //PROGRAMACIÓN
-.programacion {
-    background-color: $color-fondo;
-    padding: 6rem 10rem;
-  
-    h1 {
-        font-size: 4rem;
-        font-family: $tipografia-titulos;
-        margin-bottom: 3rem;
-        text-align: start;
-    }
-  
-    .contenedor-programacion {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-    
-        article {
-            background-color: $color-tarjetas;
-            border-radius: 8px;
-            padding: 2rem;
-            box-shadow: $sombra-baja;
-            color: $color-blanco;
-            font-family: $tipografia-principal;
-    
-            h2 {
-                font-size: 2rem;
-                font-family: $tipografia-titulos;
-                margin-bottom: 1rem;
-            }
-    
-            h3 {
-                font-size: 1.5rem;
-                font-family: $tipografia-principal;
-                margin-bottom: 0.5rem;
-                color: $color-secundario;
-            }
-    
-            p {
-                font-size: 1.1rem;
+/* Programación */
+.banner img {
+    width: 100%;
+    height: 55vh;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#carrusel-sabado, #carrusel-domingo {
+  display: none;
+}
+
+.escenario-container {
+    gap: 1rem;
+    .escenario {
+        background-color: $color-tarjetas;
+        color: $color-blanco;
+        padding: 1rem;
+        border-radius: 8px;
+
+        h4 {
+            margin-bottom: 24px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            font-weight: bold;
+            padding: 0.3rem 0.5rem;
+
+            &:nth-child(even) {
+                background-color: $color-fondo-violeta;
+                border-radius: 4px;
+                color: $color-negro;
             }
         }
     }
-}  
+}
+
+//Programación en móvil
+.escenario-container {
+    display: none;
+}
+
+#carrusel-sabado, #carrusel-domingo {
+    display: block;
+}

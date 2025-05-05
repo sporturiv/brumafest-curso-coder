@@ -3,102 +3,99 @@
 @use "partials/base" as *;
 
 //ENTRADAS
-.entradas {
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
 
-    section {
+    .entradas-container {
         display: flex;
-        flex-direction: column;
-        gap: 48px;
-
-        .entradas-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            gap: 40px;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
     
-            .entrada {
-                background-color: $color-tarjetas;
-                border-radius: 10px;
-                color: $color-blanco;
-                text-shadow: $color-negro 1px 1px ;
-                width: 100%;
-                text-align: center;
-                box-shadow: $sombra-baja;
-                padding: 32px 32px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-    
-                section {
-                    div{
-                        h3 {
-                            font-size: 8rem;
-                        }
-    
-                        h4 {
-                            text-align: left;
-                        }
-                    } 
-                }
-    
-                ul {
-                    li {
-                        text-align: left;
-                        margin: 8px 16px;
-                    }
-                }
-    
-                button {
-                    margin-top: 40px;
-                    width: 100%;
-                }
-    
-                .entradas-datos{
-                    background-color: $color-fondo;
-                    color: $color-negro;
-                    text-shadow: none;
-                    padding: 16px;
-                    border-radius: 8px;
-                }
-            }
-        }
-
-        .preguntas-frecuentes {
+        .entrada {
+            background-color: $color-tarjetas;
+            border-radius: 10px;
+            color: $color-blanco;
+            text-shadow: $color-negro 1px 1px ;
+            width: 100%;
+            text-align: center;
+            box-shadow: $sombra-baja;
+            padding: 32px 32px;
             display: flex;
             flex-direction: column;
-
-            h2 {
-                margin-bottom: 0 ;
+            justify-content: space-between;
+    
+            section {
+                div{
+                    h3 {
+                        font-size: 8rem;
+                    }
+    
+                    h4 {
+                        text-align: left;
+                    }
+                } 
             }
-
-            .accordion {
-                border-radius: 10px;
-                overflow: hidden;
-
-                .accordion-item {
-                    margin-bottom: 0 !important;
-
-                    .accordion-header {
-                        
-                        button {
-                            padding: 1rem 1.25rem;
-                            font-size: 2rem;
-                            font-weight: normal;
-
-                            &:hover {
-                                box-shadow: none;
-                                cursor: pointer;
-                            }
-                        }
-
-                    }
-
-                    .accordion-body {
-                        font-size: 1.2rem;
-                        padding: 16px 48px;
-                    }
+    
+            ul {
+                li {
+                    text-align: left;
+                    margin: 8px 16px;
                 }
-            } 
+            }
+    
+            button {
+                margin-top: 40px;
+                width: 100%;
+            }
+    
+            .entradas-datos{
+                background-color: $color-fondo;
+                color: $color-negro;
+                text-shadow: none;
+                padding: 16px;
+                border-radius: 8px;
+            }
         }
+    }
+
+    .preguntas-frecuentes {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            margin-bottom: 0 ;
+        }
+
+        .accordion {
+            border-radius: 10px;
+            overflow: hidden;
+
+            .accordion-item {
+                margin-bottom: 0 !important;
+
+                .accordion-header {
+                        
+                    button {
+                        padding: 1rem 1.25rem;
+                        font-size: 2rem;
+                        font-weight: normal;
+
+                        &:hover {
+                            box-shadow: none;
+                            cursor: pointer;
+                        }
+                    }
+
+                }
+
+                .accordion-body {
+                    font-size: 1.2rem;
+                    padding: 16px 48px;
+                }
+            }
+        } 
     }
 }

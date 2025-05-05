@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700&display=swap");
 * {
   margin: 0;
@@ -179,7 +180,7 @@ footer .footer-container .footer-bottom a {
   color: #ffffff;
 }
 
-.index .destacado {
+.destacado {
   background-image: url("../medios/fotos/banner-principal.jpg");
   height: 60vh;
   background-size: cover;
@@ -192,24 +193,25 @@ footer .footer-container .footer-bottom a {
   flex-direction: column;
   text-shadow: #000000 3px 3px;
 }
-.index .destacado h1 {
+.destacado h1 {
   font-size: 6rem;
 }
-.index .destacado button {
+.destacado button {
   background-color: rgb(217, 15, 123);
   color: #ffffff;
 }
-.index .fondo-contenedor .fechas h2 {
+
+.fondo-contenedor .fechas h2 {
   font-family: "Bebas Neue", sans-serif;
 }
-.index .fondo-contenedor .fechas .fechas-container {
+.fondo-contenedor .fechas .fechas-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 4rem;
   margin: 0 1rem;
 }
-.index .fondo-contenedor .fechas .fechas-container .fecha {
+.fondo-contenedor .fechas .fechas-container .fecha {
   background-color: darkslateblue;
   border-radius: 8px;
   color: #ffffff;
@@ -219,128 +221,141 @@ footer .footer-container .footer-bottom a {
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-.index .fondo-contenedor .fechas .fechas-container .fecha:hover {
+.fondo-contenedor .fechas .fechas-container .fecha:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
-.index .fondo-contenedor .fechas .fechas-container .fecha h3 {
+.fondo-contenedor .fechas .fechas-container .fecha h3 {
   font-size: 3rem;
 }
-.index .fondo-contenedor .fechas .fechas-container .fecha h4 {
+.fondo-contenedor .fechas .fechas-container .fecha h4 {
   font-size: 8rem;
   font-weight: lighter;
 }
-.index .fondo-contenedor .fechas .fechas-container .fecha button {
+.fondo-contenedor .fechas .fechas-container .fecha button {
   width: 50%;
 }
-.index .fondo-contenedor .mapa-container h2 {
+.fondo-contenedor .mapa-container h2 {
   font-family: "Bebas Neue", sans-serif;
 }
-.index .fondo-contenedor .mapa-container .mapa {
+.fondo-contenedor .mapa-container .mapa {
   width: 100%;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-.index .galeria h2 {
+
+.galeria h2 {
   font-family: "Bebas Neue", sans-serif;
 }
-.index .galeria p {
+.galeria p {
   font-family: "Inter", sans-serif;
 }
-.index .galeria .galeria-grid {
+.galeria .galeria-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 320px);
   gap: 1rem;
   margin: 2.5rem 0;
 }
-.index .galeria .galeria-grid img {
+.galeria .galeria-grid img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
 }
-.index .galeria .galeria-grid .foto1 {
+.galeria .galeria-grid .foto1 {
   grid-column: 1/2;
   grid-row: 1/3;
 }
-.index .galeria .galeria-grid .foto2 {
+.galeria .galeria-grid .foto2 {
   grid-column: 2/3;
   grid-row: 1/2;
 }
-.index .galeria .galeria-grid .foto3 {
+.galeria .galeria-grid .foto3 {
   grid-column: 3/4;
   grid-row: 1/2;
 }
-.index .galeria .galeria-grid .foto4 {
+.galeria .galeria-grid .foto4 {
   grid-column: 4/5;
   grid-row: 1/2;
 }
-.index .galeria .galeria-grid .foto5 {
+.galeria .galeria-grid .foto5 {
   grid-column: 2/4;
   grid-row: 2/3;
 }
-.index .galeria .galeria-grid .foto6 {
+.galeria .galeria-grid .foto6 {
   grid-column: 4/5;
   grid-row: 2/3;
 }
-.index .galeria .ver-mas {
+.galeria .ver-mas {
   margin-top: 1rem;
   font-weight: bold;
   color: #640D5F;
 }
 
-.programacion {
-  background-color: #f3f4f8;
-  padding: 6rem 10rem;
-}
-.programacion h1 {
-  font-size: 4rem;
-  font-family: "Bebas Neue", sans-serif;
-  margin-bottom: 3rem;
-  text-align: start;
-}
-.programacion .contenedor-programacion {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-.programacion .contenedor-programacion article {
-  background-color: darkslateblue;
+/* Programación */
+.banner img {
+  width: 100%;
+  height: 55vh;
+  object-fit: cover;
   border-radius: 8px;
-  padding: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#carrusel-sabado, #carrusel-domingo {
+  display: none;
+}
+
+.escenario-container {
+  gap: 1rem;
+}
+.escenario-container .escenario {
+  background-color: darkslateblue;
   color: #ffffff;
-  font-family: "Inter", sans-serif;
+  padding: 1rem;
+  border-radius: 8px;
 }
-.programacion .contenedor-programacion article h2 {
-  font-size: 2rem;
-  font-family: "Bebas Neue", sans-serif;
-  margin-bottom: 1rem;
+.escenario-container .escenario h4 {
+  margin-bottom: 24px;
 }
-.programacion .contenedor-programacion article h3 {
-  font-size: 1.5rem;
-  font-family: "Inter", sans-serif;
-  margin-bottom: 0.5rem;
-  color: #ffb300;
+.escenario-container .escenario ul {
+  list-style: none;
+  padding: 0;
 }
-.programacion .contenedor-programacion article p {
+.escenario-container .escenario li {
   font-size: 1.1rem;
+  margin-bottom: 12px;
+  font-weight: bold;
+  padding: 0.3rem 0.5rem;
+}
+.escenario-container .escenario li:nth-child(even) {
+  background-color: rgb(222, 218, 255);
+  border-radius: 4px;
+  color: #000000;
+}
+
+.escenario-container {
+  display: none;
+}
+
+#carrusel-sabado, #carrusel-domingo {
+  display: block;
 }
 
 .artistas-dia-container {
   margin: 0;
   padding: 3rem 10rem;
 }
-.artistas-dia-container .domingo {
+
+.domingo {
   background-color: rgb(222, 218, 255);
 }
-.artistas-dia-container .artistas-destacados {
+
+.artistas-destacados {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
-.artistas-dia-container .artistas-destacados .artista {
+.artistas-destacados .artista {
   background-color: darkslateblue;
   border-radius: 10px;
   padding: 1.5rem;
@@ -350,17 +365,27 @@ footer .footer-container .footer-bottom a {
   text-shadow: #000000 1px 1px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-.artistas-dia-container .artistas-destacados .artista p {
+.artistas-destacados .artista p {
   margin-bottom: 12px;
 }
-.artistas-dia-container .artistas-destacados .artista .imagen {
+.artistas-destacados .artista .imagen {
   width: 100%;
   aspect-ratio: 1.5/1;
   object-fit: cover; /* recorta y escala la imagen */
   border-radius: 6px;
   margin-bottom: 1rem;
 }
-.artistas-dia-container .artistas-grid {
+.artistas-destacados .artista .redes-iconos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+.artistas-destacados .artista .redes-iconos img {
+  width: 32px;
+  height: 32px;
+}
+
+.artistas-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
@@ -368,25 +393,25 @@ footer .footer-container .footer-bottom a {
   justify-items: left;
   display: grid;
 }
-.artistas-dia-container .artistas-grid .artista-mini {
+.artistas-grid .artista-mini {
   display: flex;
   flex-direction: row;
   gap: 20px;
   align-items: center;
   width: 100%;
 }
-.artistas-dia-container .artistas-grid .artista-mini .artista-mini-datos {
+.artistas-grid .artista-mini .artista-mini-datos {
   display: flex;
   flex-direction: column;
   text-align: start;
   width: 100%;
   gap: 8px;
 }
-.artistas-dia-container .artistas-grid .artista-mini .artista-mini-datos h4 {
+.artistas-grid .artista-mini .artista-mini-datos h4 {
   font-family: "Inter", sans-serif;
   font-size: 1.2rem;
 }
-.artistas-dia-container .artistas-grid .artista-mini img {
+.artistas-grid .artista-mini img {
   width: 100%;
   max-width: 80px;
   max-height: 80px;
@@ -396,32 +421,32 @@ footer .footer-container .footer-bottom a {
   margin-bottom: 0.5rem;
   border-style: solid 1px #000000;
 }
-.artistas-dia-container .artistas-grid .artista-mini p {
+.artistas-grid .artista-mini p {
   font-weight: bold;
   margin: 0.5rem 0;
 }
-.artistas-dia-container .artistas-grid .artista-mini .redes {
+.artistas-grid .artista-mini .redes {
   display: flex;
   justify-content: left;
   gap: 0.4rem;
 }
-.artistas-dia-container .artistas-grid .artista-mini .redes img {
+.artistas-grid .artista-mini .redes img {
   width: 32px;
   height: 32px;
 }
 
-.entradas section {
+section {
   display: flex;
   flex-direction: column;
   gap: 48px;
 }
-.entradas section .entradas-container {
+section .entradas-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 40px;
 }
-.entradas section .entradas-container .entrada {
+section .entradas-container .entrada {
   background-color: darkslateblue;
   border-radius: 10px;
   color: #ffffff;
@@ -434,51 +459,51 @@ footer .footer-container .footer-bottom a {
   flex-direction: column;
   justify-content: space-between;
 }
-.entradas section .entradas-container .entrada section div h3 {
+section .entradas-container .entrada section div h3 {
   font-size: 8rem;
 }
-.entradas section .entradas-container .entrada section div h4 {
+section .entradas-container .entrada section div h4 {
   text-align: left;
 }
-.entradas section .entradas-container .entrada ul li {
+section .entradas-container .entrada ul li {
   text-align: left;
   margin: 8px 16px;
 }
-.entradas section .entradas-container .entrada button {
+section .entradas-container .entrada button {
   margin-top: 40px;
   width: 100%;
 }
-.entradas section .entradas-container .entrada .entradas-datos {
+section .entradas-container .entrada .entradas-datos {
   background-color: #f3f4f8;
   color: #000000;
   text-shadow: none;
   padding: 16px;
   border-radius: 8px;
 }
-.entradas section .preguntas-frecuentes {
+section .preguntas-frecuentes {
   display: flex;
   flex-direction: column;
 }
-.entradas section .preguntas-frecuentes h2 {
+section .preguntas-frecuentes h2 {
   margin-bottom: 0;
 }
-.entradas section .preguntas-frecuentes .accordion {
+section .preguntas-frecuentes .accordion {
   border-radius: 10px;
   overflow: hidden;
 }
-.entradas section .preguntas-frecuentes .accordion .accordion-item {
+section .preguntas-frecuentes .accordion .accordion-item {
   margin-bottom: 0 !important;
 }
-.entradas section .preguntas-frecuentes .accordion .accordion-item .accordion-header button {
+section .preguntas-frecuentes .accordion .accordion-item .accordion-header button {
   padding: 1rem 1.25rem;
   font-size: 2rem;
   font-weight: normal;
 }
-.entradas section .preguntas-frecuentes .accordion .accordion-item .accordion-header button:hover {
+section .preguntas-frecuentes .accordion .accordion-item .accordion-header button:hover {
   box-shadow: none;
   cursor: pointer;
 }
-.entradas section .preguntas-frecuentes .accordion .accordion-item .accordion-body {
+section .preguntas-frecuentes .accordion .accordion-item .accordion-body {
   font-size: 1.2rem;
   padding: 16px 48px;
 }
