@@ -1,5 +1,5 @@
 //Variables y estilos generales
-@use "partials/variables" as *;
+@use "variables" as *;
 
 //Reset
 * {
@@ -37,11 +37,6 @@ button {
   border-radius: 8px;
   padding: 12px 24px;
   font-size: 1rem;
-
-  &:hover {
-    box-shadow: $sombra-hover;
-    cursor: pointer;
-  }
 }
 
 //Body y secciones
@@ -55,10 +50,6 @@ body {
 section {
   text-align: start;
   margin: 6rem 10rem;
-
-  h2 {
-    margin-bottom: 1.5rem;
-  }
 }
 
 .fondo-contenedor {

@@ -1,10 +1,15 @@
 //Variables y estilos generales
-@use "partials/variables" as *;
-@use "partials/base" as *;
+@use "variables" as *;
+@use "base" as *;
+
+// BREAKPOINTS MQ
+$bp-mobile: 767px ;
+$bp-tablet: 1024px ;
+$bp-mobile-end: $bp-mobile + 1px ;
+$bp-tablet-end: $bp-tablet + 1px ;
 
 //TÍTULOS Y PÁRRAFOS
-//Móvil
-@media (max-width: 575px) {
+@media (max-width: $bp-mobile) {
     h1 { font-size: 3rem; }
     h2 { font-size: 2.2rem; }
     h3 { font-size: 2rem; }
@@ -12,229 +17,251 @@
     h5 { font-size: 1.2rem; }
     h6 { font-size: 1.1rem; }
 
-    p{
-        font-size: 1rem;
-    }
+    p  { font-size: 1rem; }
 }
 
 // HEADER
 //Móvil
-@media (max-width: 767px) {
-    .header-container {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+@media (max-width: $bp-mobile) {
+    header {
+        .navbar {
+            .header-container {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+        }
     }
 }
 
 //Tablet
-@media (min-width: 768px) and (max-width: 1024px) {
-
-    .header-container {
-        padding-left: 4rem;
-        padding-right: 4rem;
-
-        .navbar-brand {
-            font-size: 2rem;
-        }
+@media (min-width: $bp-mobile-end) and (max-width: $bp-tablet) {
+    header {
+        .navbar {
+            .header-container {
+                flex-direction: row;
+                padding-left: 4rem;
+                padding-right: 4rem;
     
-        .nav-link {
-            font-size: 1.1rem;
+                .navbar-brand {
+                    font-size: 2rem;
+                }
+            
+                .navbar-toggler {
+                    font-size: 1.8rem;
+                }
+    
+                .navbar-collapse {
+                    .navbar-nav {
+                        .nav-link {
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
         }
+
     }
 }
 
-//SECCIONES
-//Móvil
-@media (max-width: 767px) {
+// SECCIONES
+// Móvil
+@media (max-width: $bp-mobile) {
     section {
         margin: 2.5rem 1.5rem;
     }
 }
 
-//Tablet
-@media (min-width: 768px) and (max-width: 1024px) {
+// Tablet
+@media (min-width: $bp-mobile-end) and (max-width: $bp-tablet) {
     section {
         margin: 4rem 4rem;
     }
 }
 
-//INDEX
-//Móvil
-@media (max-width: 767px) {
-    .destacado {
-        height: 70vh;
-        padding: 2rem;
-        text-align: center;
 
-        h1 {
-            font-size: 4rem;
+// INDEX
+//Móvil
+@media (max-width: $bp-mobile) {
+    .index {
+        .destacado {
+            height: 70vh;
+            padding: 2rem;
+    
+            h1 { 
+                font-size: 4rem; 
+            }
+    
+            button {
+                font-size: 1rem;
+                width: 80%;
+                max-width: 300px;
+                margin-top: 1rem;
+            }
+        }
+            
+        .fechas {
+            .fechas-container {
+                flex-direction: column;
+                gap: 2rem;
+                margin: 0;
+    
+                .fecha {
+                    width: 100%;
+                    padding: 1.5rem;
+                        
+                    h3 { 
+                        font-size: 2rem; 
+                    }
+        
+                    h4 { 
+                        font-size: 4rem; 
+                    }
+        
+                    button { 
+                        width: 100%; font-size: 1rem; 
+                    }
+                }
+            }
         }
     
-        button {
-            font-size: 1rem;
-            width: 80%;
-            max-width: 300px;
-            margin-top: 1rem;
-        }
-    }
-
-    .fechas-container {
-        flex-direction: column;
-        gap: 2rem;
-        margin: 0;
-
-        .fecha {
-            width: 100%;
-            padding: 1.5rem;
-
-            h3 { font-size: 2rem; }
-
-            h4 { font-size: 4rem; }
-
-            button {
-                width: 100%;
+        .galeria {
+            .galeria-grid {
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(4,200px);
+                gap: 0.8rem;
+    
+                .foto1 { 
+                    grid-column: 1/3; 
+                    grid-row: 1; 
+                }
+    
+                .foto2 { 
+                    grid-column: 1;
+                    grid-row: 2;
+                }
+    
+                .foto3 { 
+                    grid-column: 2;
+                    grid-row: 2;
+                }
+    
+                .foto4 { 
+                    grid-column: 1;
+                    grid-row: 3;
+                }
+    
+                .foto6 { 
+                    grid-column: 2;
+                    grid-row: 3;
+                }
+    
+                .foto5 { 
+                    grid-column: 1/3;
+                    grid-row: 4;
+                }
+            }
+    
+            .ver-mas {
+                display: block;
                 font-size: 1rem;
             }
+        }
 
-        }
-    }
-
-    .mapa {
-        height: 300px;
-    }
-
-    .galeria-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 200px);
-        gap: 0.8rem;
-
-        .foto1 {
-            grid-column: 1 / 3;
-            grid-row: 1;
-        }
-        
-        .foto2 {
-            grid-column: 1;
-            grid-row: 2;
-        }
-        
-        .foto3 {
-            grid-column: 2;
-            grid-row: 2;
-        }
-        
-        .foto4 {
-            grid-column: 1;
-            grid-row: 3;
-        }
-        
-        .foto6 {
-            grid-column: 2;
-            grid-row: 3;
-        }
-        
-        .foto5 {
-            grid-column: 1 / 3;
-            grid-row: 4;
-        }
-    }
-
-    .ver-mas {
-        display: block;
-        color: $color-principal;
-        font-size: 1rem;
     }
 }
 
-//Tablet
-@media (min-width: 768px) and (max-width: 1024px) {
-    .fechas-container {
-        gap: 1rem;
-        margin: 0 ;
-
-        button {
-            width: 100%;
-        }
-    }
-}
-
-//PROGRAMACIÓN
-//Móvil
-.escenario-container {
-    display: none;
-}
-
-#carrusel-sabado, #carrusel-domingo {
-    display: block;
-}
-  
-//Tablet
-@media (min-width: 768px) and (max-width: 1023px) {
-    #carrusel-sabado, #carrusel-domingo {
-        display: none;
-    }
-  
-    .escenario-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
-        gap: 1rem;
-
-        .principal {
-            grid-column: 1 / 3;
-        }
-    }
-}
-  
-//Escritorio
-@media (min-width: 1024px) {
-    #carrusel-sabado, #carrusel-domingo {
-      display: none;
-    }
-  
-    .escenario-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: auto;
-        gap: 1rem;
-
-        .principal {
-            grid-column: auto;
-        }
-    }
-}
-
-//ENTRADAS
-//Móvil
-@media (max-width: 767px) {
-    .accordion-item {
-        .accordion-header {
-            button {
-                padding: 24px 16px;
-                font-size: 1.5rem;
+@media (min-width: $bp-mobile-end) and (max-width: $bp-tablet) {
+    .index {
+        .fechas {
+            .fechas-container { 
+                gap: 1rem; 
+                margin: 0; 
+            }
+    
+            button { 
+                width: 100%; 
             }
         }
+    }
+}
+
+
+// PROGRAMACIÓN
+.programacion {
+    @media (max-width: $bp-mobile) {
+        #carrusel-sabado, #carrusel-domingo { 
+            display: block; 
+        }
     
-        .accordion-body {
-            font-size: 0.9rem;
-            padding: 16px;
+        .escenario-container {
+            display: none ;
+        }
+    }
+
+    // Tablet
+    @media (min-width: $bp-mobile-end) and (max-width: $bp-tablet) {
+        #carrusel-sabado, #carrusel-domingo { 
+            display: none; 
+        }
+    
+        .escenario-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 1rem;
+    
+            .principal { 
+                grid-column: 1 / 3; 
+            }
         }
     }
 }
 
-//CONTACTO
-//Tablet
-@media (min-width: 768px) and (max-width: 1024px) {
 
-    .formulario {
-        padding: 48px;
+// ARTISTAS
+@media (max-width: $bp-mobile) {
+    .artistas-destacados { 
+        flex-direction: column;
+    }
+
+    .artistas-grid {
+        grid-template-columns: repeat(1,1fr);
     }
 }
 
-//Móvil
-@media (max-width: 767px) {
+@media (min-width: $bp-mobile-end) and (max-width: $bp-tablet) {
+    .artistas-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
 
+// ENTRADAS
+@media (max-width: $bp-mobile) {
+    .entradas {
+        .entradas-container { 
+            flex-direction: column; 
+            gap: 2rem; 
+        }
+    
+        .preguntas-frecuentes {
+            .accordion-header button { 
+                font-size: 1.5rem; 
+                padding: 24px 16px; 
+            }
+                
+            .accordion-body { 
+                font-size: 0.9rem; 
+                padding: 16px; 
+            }
+        }
+    }
+}
+
+
+
+// CONTACTO
+// Móvil
+@media (max-width: $bp-mobile) {
     .contacto {
         margin-bottom: 3rem;
 
@@ -244,105 +271,117 @@
             form {
                 font-size: 1rem;
                 gap: 1.2rem;
-
-                h2 {
-                    margin: 0 0 8px;
+    
+                h2 { 
+                    margin-bottom: 0.5rem; 
                 }
 
-                textarea {
-                    height: 100px;
+                textarea { 
+                    height: 100px; 
+                }
+
+                button {
+                    width: 100%;
                 }
             }
         }
     }
 }
 
-//Escritorio
-@media (min-width: 992px) {
-
-    .formulario {
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 60px;
-    }
-}
-
-//FOOTER
-//Tablet
-@media (min-width: 768px) and (max-width: 1024px) {
-    footer {
-        padding: 2rem 4rem;
-
-        .footer-column {
-            .festival, .ayuda {
-                width: calc(50% - 2rem);
-                order: 1;
-            }
-
-            .newsletter, .redes {
-                width: calc(50% - 2rem);
-                order: 2;
-                margin-top: 2rem;
+// Tablet
+@media (min-width: $bp-mobile-end) and (max-width: $bp-tablet) {
+    .formulario { 
+        padding: 48px;
+        form{
+            button {
+                width: 100%;
             }
         }
     }
 }
+  
 
-//Móvil
-@media (max-width: 767px) {
+// FOOTER
+// Móvil
+@media (max-width: $bp-mobile) {
     footer {
         padding: 2rem 1.5rem;
-
-        .footer-title {
-            text-align: center;
-            margin-bottom: 1rem;
-        }
+        .footer-container {
+            .footer-title { 
+                margin-bottom: 1rem; 
+            }
     
-        .footer-columns {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-
-            .footer-column {
-                text-align: start;
-
-                .festival, .ayuda {
-                    width: calc(50% - 0.75rem);
-                    order: 1;
-                }
-                
-                .redes {
-                    margin-top: 0.5rem;
-                    width: 100%;
-                    order: 2;
-                }
-            
-                .newsletter {
-                    width: 100%;
-                    order: 3;
-                    margin-top: 0.8rem;
-
-                    input {
+            .footer-columns {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1.5rem;
+                .footer-column {
+                    &.festival, &.ayuda {
+                        width: calc(50% - 0.75rem);
+                        order: 1;
+                    }
+        
+                    &.redes {
                         width: 100%;
-                        max-width: 300px;
-                        margin: 0.4rem auto;
+                        order: 2;
+                        margin-top: .5rem;
                     }
-
-                    label {
-                        font-size: 0.9rem;
+        
+                    &.newsletter {
+                        width: 100%;
+                        order: 3;
+                        margin-top: .8rem;
+                        form {
+                            .suscribirme {
+                                display: flex;
+                                flex-direction: column;
+                            }
+                        }
                     }
-
                 }
             }
-
+          
             .footer-bottom {
                 flex-direction: row;
                 gap: 1rem;
-                margin-top: 0.8rem;
-
-                a {
+    
+                a { 
                     font-size: 0.7rem;
+                }
+            }
+        }
+    }
+}
+
+// Tablet
+@media (min-width: $bp-mobile-end) and (max-width: $bp-tablet) {
+    footer {
+        padding: 2rem 4rem;
+        .footer-container {
+            .footer-columns {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1.5rem;
+                justify-content: space-between;
+    
+                .footer-column {
+                    width: 48%;
+    
+                    &.festival {
+                        order: 1;
+                    }
+    
+                    &.ayuda {
+                        order: 2;
+                    }
+    
+                    &.redes {
+                        order: 3;
+                    }
+    
+                    &.newsletter {
+                        order: 4;
+                    }
                 }
             }
         }

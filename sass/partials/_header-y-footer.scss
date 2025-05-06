@@ -1,14 +1,18 @@
 //Variables y estilos generales
-@use "partials/variables" as *;
-@use "partials/base" as *;
+@use "variables" as *;
+@use "base" as *;
 
+// HEADER
 // HEADER
 header {
     .navbar {
       background-color: $color-principal;
-  
+    
         .header-container {
             width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding-left: 10rem;
             padding-right: 10rem;
     
@@ -16,14 +20,13 @@ header {
                 font-family: $tipografia-titulos;
                 font-size: 2.5rem;
                 color: $color-blanco;
-        
-                &:hover {
-                    color: $color-secundario;
-                }
             }
     
             .navbar-toggler {
                 border: none;
+                background-color: transparent;
+                color: $color-blanco;
+                font-size: 2rem;
             }
     
             .navbar-collapse {
@@ -34,16 +37,13 @@ header {
                         font-family: $tipografia-titulos;
                         font-size: 1.5rem;
                         color: $color-blanco;
-            
-                        &:hover {
-                            color: $color-secundario;
-                        }
                     }
                 }
             }
         }
     }
 }
+  
 
 // FOOTER
 footer {
@@ -108,18 +108,36 @@ footer {
         
                 &.newsletter {
                     form {
-                        input {
-                            width: 100%;
-                            padding: 8px 16px;
-                            border: none;
-                            border-radius: 4px;
-                            margin-top: 8px;
+                        .suscribirme {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 0.3rem;
+                            margin-top: 0.5rem;
+                
+                            .newsletter-input {
+                                flex: 1;
+                                padding: 8px 12px;
+                                border: none;
+                                border-radius: 4px;
+                                font-size: 0.9rem;
+                                font-style: italic
+                            }
+                
+                            .newsletter-button {
+                                padding: 8px 10px;
+                                border: none;
+                                background-color: $color-secundario;
+                                color: $color-negro;
+                                border-radius: 4px;
+                                cursor: pointer;
+                                font-size: 0.8rem;
+                            }
                         }
                     }
                 }
-            }
+            } 
         }
-    
+
         .footer-bottom {
             border-top: 1px solid $color-blanco;
             margin-top: 1rem;
@@ -135,4 +153,3 @@ footer {
         }
     }
 }
-  

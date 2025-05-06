@@ -1,6 +1,6 @@
 //Variables y estilos generales
-@use "partials/variables" as *;
-@use "partials/base" as *;
+@use "variables" as *;
+@use "base" as *;
 
 //ARTISTAS
 .artistas-dia-container {
@@ -35,7 +35,7 @@
         .imagen {
             width: 100%;
             aspect-ratio: 1.5 / 1;
-            object-fit: cover; /* recorta y escala la imagen */
+            object-fit: cover;
             border-radius: 6px;
             margin-bottom: 1rem;
         }
@@ -59,7 +59,6 @@
     gap: 1rem;
     padding: 2rem 0;
     justify-items:left;
-    display: grid;
 
     .artista-mini {
         display: flex;
@@ -89,7 +88,7 @@
             object-fit: cover;
             border-radius: 6px;
             margin-bottom: 0.5rem;
-            border-style: solid 1px $color-negro;
+            border: 1px solid $color-negro;
         }
 
         p {

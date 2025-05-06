@@ -1,16 +1,16 @@
 //Variables y estilos generales
-@use "partials/variables" as *;
-@use "partials/base" as *;
+@use "partials/variables" ;
+@use "partials/base" ;
 
 //Header y footer
-@use "partials/header-y-footer" as *;
+@use "partials/header-y-footer" ;
 
 //Páginas
-@use "partials/index" as *;
-@use "partials/programacion" as *;
-@use "partials/artistas" as *;
-@use "partials/entradas" as *;
-@use "partials/contacto" as *;
+@use "partials/index" ;
+@use "partials/programacion" ;
+@use "partials/artistas" ;
+@use "partials/entradas" ;
+@use "partials/contacto" ;
 
 //MediaQ
-@use "partials/mediaq" as *;
+@use "partials/mediaq" ;

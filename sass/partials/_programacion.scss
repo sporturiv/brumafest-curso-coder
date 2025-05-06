@@ -1,9 +1,8 @@
 //Variables y estilos generales
-@use "partials/variables" as *;
-@use "partials/base" as *;
+@use "variables" as *;
+@use "base" as *;
 
 //PROGRAMACIÓN
-/* Programación */
 .banner img {
     width: 100%;
     height: 55vh;
@@ -16,7 +15,10 @@
 }
 
 .escenario-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     gap: 1rem;
+    
     .escenario {
         background-color: $color-tarjetas;
         color: $color-blanco;
@@ -45,13 +47,4 @@
             }
         }
     }
-}
-
-//Programación en móvil
-.escenario-container {
-    display: none;
-}
-
-#carrusel-sabado, #carrusel-domingo {
-    display: block;
 }

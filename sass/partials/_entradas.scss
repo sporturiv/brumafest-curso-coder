@@ -1,6 +1,6 @@
 //Variables y estilos generales
-@use "partials/variables" as *;
-@use "partials/base" as *;
+@use "variables" as *;
+@use "base" as *;
 
 //ENTRADAS
 section {
@@ -27,16 +27,14 @@ section {
             flex-direction: column;
             justify-content: space-between;
     
-            section {
-                div{
-                    h3 {
-                        font-size: 8rem;
-                    }
+            div{
+                h3 {
+                    font-size: 8rem;
+                }
     
-                    h4 {
-                        text-align: left;
-                    }
-                } 
+                h4 {
+                    text-align: left;
+                }
             }
     
             ul {
@@ -80,13 +78,8 @@ section {
                         
                     button {
                         padding: 1rem 1.25rem;
-                        font-size: 2rem;
                         font-weight: normal;
-
-                        &:hover {
-                            box-shadow: none;
-                            cursor: pointer;
-                        }
+                        font-size: 4rem;
                     }
 
                 }

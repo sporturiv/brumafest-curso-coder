@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700&display=swap");
 * {
   margin: 0;
@@ -51,10 +50,6 @@ button {
   padding: 12px 24px;
   font-size: 1rem;
 }
-button:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-}
 
 body {
   font-family: "Inter", sans-serif;
@@ -66,9 +61,6 @@ body {
 section {
   text-align: start;
   margin: 6rem 10rem;
-}
-section h2 {
-  margin-bottom: 1.5rem;
 }
 
 .fondo-contenedor {
@@ -83,6 +75,9 @@ header .navbar {
 }
 header .navbar .header-container {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-left: 10rem;
   padding-right: 10rem;
 }
@@ -91,11 +86,11 @@ header .navbar .header-container .navbar-brand {
   font-size: 2.5rem;
   color: #ffffff;
 }
-header .navbar .header-container .navbar-brand:hover {
-  color: #ffb300;
-}
 header .navbar .header-container .navbar-toggler {
   border: none;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 2rem;
 }
 header .navbar .header-container .navbar-collapse .navbar-nav {
   margin-left: auto;
@@ -104,9 +99,6 @@ header .navbar .header-container .navbar-collapse .navbar-nav .nav-link {
   font-family: "Bebas Neue", sans-serif;
   font-size: 1.5rem;
   color: #ffffff;
-}
-header .navbar .header-container .navbar-collapse .navbar-nav .nav-link:hover {
-  color: #ffb300;
 }
 
 footer {
@@ -160,12 +152,28 @@ footer .footer-container .footer-columns .footer-column.redes .redes-iconos img 
   width: 32px;
   height: 32px;
 }
-footer .footer-container .footer-columns .footer-column.newsletter form input {
-  width: 100%;
-  padding: 8px 16px;
+footer .footer-container .footer-columns .footer-column.newsletter form .suscribirme {
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+}
+footer .footer-container .footer-columns .footer-column.newsletter form .suscribirme .newsletter-input {
+  flex: 1;
+  padding: 8px 12px;
   border: none;
   border-radius: 4px;
-  margin-top: 8px;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+footer .footer-container .footer-columns .footer-column.newsletter form .suscribirme .newsletter-button {
+  padding: 8px 10px;
+  border: none;
+  background-color: #ffb300;
+  color: #000000;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
 }
 footer .footer-container .footer-bottom {
   border-top: 1px solid #ffffff;
@@ -292,7 +300,6 @@ footer .footer-container .footer-bottom a {
   color: #640D5F;
 }
 
-/* Programación */
 .banner img {
   width: 100%;
   height: 55vh;
@@ -305,6 +312,8 @@ footer .footer-container .footer-bottom a {
 }
 
 .escenario-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 .escenario-container .escenario {
@@ -330,14 +339,6 @@ footer .footer-container .footer-bottom a {
   background-color: rgb(222, 218, 255);
   border-radius: 4px;
   color: #000000;
-}
-
-.escenario-container {
-  display: none;
-}
-
-#carrusel-sabado, #carrusel-domingo {
-  display: block;
 }
 
 .artistas-dia-container {
@@ -371,7 +372,7 @@ footer .footer-container .footer-bottom a {
 .artistas-destacados .artista .imagen {
   width: 100%;
   aspect-ratio: 1.5/1;
-  object-fit: cover; /* recorta y escala la imagen */
+  object-fit: cover;
   border-radius: 6px;
   margin-bottom: 1rem;
 }
@@ -391,7 +392,6 @@ footer .footer-container .footer-bottom a {
   gap: 1rem;
   padding: 2rem 0;
   justify-items: left;
-  display: grid;
 }
 .artistas-grid .artista-mini {
   display: flex;
@@ -419,7 +419,7 @@ footer .footer-container .footer-bottom a {
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 0.5rem;
-  border-style: solid 1px #000000;
+  border: 1px solid #000000;
 }
 .artistas-grid .artista-mini p {
   font-weight: bold;
@@ -459,10 +459,10 @@ section .entradas-container .entrada {
   flex-direction: column;
   justify-content: space-between;
 }
-section .entradas-container .entrada section div h3 {
+section .entradas-container .entrada div h3 {
   font-size: 8rem;
 }
-section .entradas-container .entrada section div h4 {
+section .entradas-container .entrada div h4 {
   text-align: left;
 }
 section .entradas-container .entrada ul li {
@@ -496,12 +496,8 @@ section .preguntas-frecuentes .accordion .accordion-item {
 }
 section .preguntas-frecuentes .accordion .accordion-item .accordion-header button {
   padding: 1rem 1.25rem;
-  font-size: 2rem;
   font-weight: normal;
-}
-section .preguntas-frecuentes .accordion .accordion-item .accordion-header button:hover {
-  box-shadow: none;
-  cursor: pointer;
+  font-size: 4rem;
 }
 section .preguntas-frecuentes .accordion .accordion-item .accordion-body {
   font-size: 1.2rem;
@@ -560,23 +556,17 @@ section .preguntas-frecuentes .accordion .accordion-item .accordion-body {
 .contacto .formulario form div textarea {
   height: 120px;
 }
-.contacto .formulario form button[type=submit] {
+.contacto .formulario form button {
   align-self: flex-start;
-  background-color: #ffffff;
-  color: darkslateblue;
   font-weight: bold;
   border: none;
   border-radius: 4px;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s;
-}
-.contacto .formulario form button[type=submit]:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   h1 {
     font-size: 3rem;
   }
@@ -600,21 +590,25 @@ section .preguntas-frecuentes .accordion .accordion-item .accordion-body {
   }
 }
 @media (max-width: 767px) {
-  .header-container {
+  header .navbar .header-container {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .header-container {
+  header .navbar .header-container {
+    flex-direction: row;
     padding-left: 4rem;
     padding-right: 4rem;
   }
-  .header-container .navbar-brand {
+  header .navbar .header-container .navbar-brand {
     font-size: 2rem;
   }
-  .header-container .nav-link {
-    font-size: 1.1rem;
+  header .navbar .header-container .navbar-toggler {
+    font-size: 1.8rem;
+  }
+  header .navbar .header-container .navbar-collapse .navbar-nav .nav-link {
+    font-size: 1.3rem;
   }
 }
 @media (max-width: 767px) {
@@ -628,136 +622,129 @@ section .preguntas-frecuentes .accordion .accordion-item .accordion-body {
   }
 }
 @media (max-width: 767px) {
-  .destacado {
+  .index .destacado {
     height: 70vh;
     padding: 2rem;
-    text-align: center;
   }
-  .destacado h1 {
+  .index .destacado h1 {
     font-size: 4rem;
   }
-  .destacado button {
+  .index .destacado button {
     font-size: 1rem;
     width: 80%;
     max-width: 300px;
     margin-top: 1rem;
   }
-  .fechas-container {
+  .index .fechas .fechas-container {
     flex-direction: column;
     gap: 2rem;
     margin: 0;
   }
-  .fechas-container .fecha {
+  .index .fechas .fechas-container .fecha {
     width: 100%;
     padding: 1.5rem;
   }
-  .fechas-container .fecha h3 {
+  .index .fechas .fechas-container .fecha h3 {
     font-size: 2rem;
   }
-  .fechas-container .fecha h4 {
+  .index .fechas .fechas-container .fecha h4 {
     font-size: 4rem;
   }
-  .fechas-container .fecha button {
+  .index .fechas .fechas-container .fecha button {
     width: 100%;
     font-size: 1rem;
   }
-  .mapa {
-    height: 300px;
-  }
-  .galeria-grid {
-    display: grid;
+  .index .galeria .galeria-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 200px);
     gap: 0.8rem;
   }
-  .galeria-grid .foto1 {
+  .index .galeria .galeria-grid .foto1 {
     grid-column: 1/3;
     grid-row: 1;
   }
-  .galeria-grid .foto2 {
+  .index .galeria .galeria-grid .foto2 {
     grid-column: 1;
     grid-row: 2;
   }
-  .galeria-grid .foto3 {
+  .index .galeria .galeria-grid .foto3 {
     grid-column: 2;
     grid-row: 2;
   }
-  .galeria-grid .foto4 {
+  .index .galeria .galeria-grid .foto4 {
     grid-column: 1;
     grid-row: 3;
   }
-  .galeria-grid .foto6 {
+  .index .galeria .galeria-grid .foto6 {
     grid-column: 2;
     grid-row: 3;
   }
-  .galeria-grid .foto5 {
+  .index .galeria .galeria-grid .foto5 {
     grid-column: 1/3;
     grid-row: 4;
   }
-  .ver-mas {
+  .index .galeria .ver-mas {
     display: block;
-    color: #640D5F;
     font-size: 1rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .fechas-container {
+  .index .fechas .fechas-container {
     gap: 1rem;
     margin: 0;
   }
-  .fechas-container button {
+  .index .fechas button {
     width: 100%;
   }
 }
-.escenario-container {
-  display: none;
-}
-
-#carrusel-sabado, #carrusel-domingo {
-  display: block;
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  #carrusel-sabado, #carrusel-domingo {
+@media (max-width: 767px) {
+  .programacion #carrusel-sabado, .programacion #carrusel-domingo {
+    display: block;
+  }
+  .programacion .escenario-container {
     display: none;
   }
-  .escenario-container {
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .programacion #carrusel-sabado, .programacion #carrusel-domingo {
+    display: none;
+  }
+  .programacion .escenario-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 1rem;
   }
-  .escenario-container .principal {
+  .programacion .escenario-container .principal {
     grid-column: 1/3;
   }
 }
-@media (min-width: 1024px) {
-  #carrusel-sabado, #carrusel-domingo {
-    display: none;
-  }
-  .escenario-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: auto;
-    gap: 1rem;
-  }
-  .escenario-container .principal {
-    grid-column: auto;
-  }
-}
+
 @media (max-width: 767px) {
-  .accordion-item .accordion-header button {
-    padding: 24px 16px;
-    font-size: 1.5rem;
+  .artistas-destacados {
+    flex-direction: column;
   }
-  .accordion-item .accordion-body {
-    font-size: 0.9rem;
-    padding: 16px;
+  .artistas-grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .formulario {
-    padding: 48px;
+  .artistas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .entradas .entradas-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .entradas .preguntas-frecuentes .accordion-header button {
+    font-size: 1.5rem;
+    padding: 24px 16px;
+  }
+  .entradas .preguntas-frecuentes .accordion-body {
+    font-size: 0.9rem;
+    padding: 16px;
   }
 }
 @media (max-width: 767px) {
@@ -772,78 +759,86 @@ section .preguntas-frecuentes .accordion .accordion-item .accordion-body {
     gap: 1.2rem;
   }
   .contacto .formulario form h2 {
-    margin: 0 0 8px;
+    margin-bottom: 0.5rem;
   }
   .contacto .formulario form textarea {
     height: 100px;
   }
-}
-@media (min-width: 992px) {
-  .formulario {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 60px;
+  .contacto .formulario form button {
+    width: 100%;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  footer {
-    padding: 2rem 4rem;
+  .formulario {
+    padding: 48px;
   }
-  footer .footer-column .festival, footer .footer-column .ayuda {
-    width: calc(50% - 2rem);
-    order: 1;
-  }
-  footer .footer-column .newsletter, footer .footer-column .redes {
-    width: calc(50% - 2rem);
-    order: 2;
-    margin-top: 2rem;
+  .formulario form button {
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
   footer {
     padding: 2rem 1.5rem;
   }
-  footer .footer-title {
-    text-align: center;
+  footer .footer-container .footer-title {
     margin-bottom: 1rem;
   }
-  footer .footer-columns {
+  footer .footer-container .footer-columns {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
   }
-  footer .footer-columns .footer-column {
-    text-align: start;
-  }
-  footer .footer-columns .footer-column .festival, footer .footer-columns .footer-column .ayuda {
+  footer .footer-container .footer-columns .footer-column.festival, footer .footer-container .footer-columns .footer-column.ayuda {
     width: calc(50% - 0.75rem);
     order: 1;
   }
-  footer .footer-columns .footer-column .redes {
-    margin-top: 0.5rem;
+  footer .footer-container .footer-columns .footer-column.redes {
     width: 100%;
     order: 2;
+    margin-top: 0.5rem;
   }
-  footer .footer-columns .footer-column .newsletter {
+  footer .footer-container .footer-columns .footer-column.newsletter {
     width: 100%;
     order: 3;
     margin-top: 0.8rem;
   }
-  footer .footer-columns .footer-column .newsletter input {
-    width: 100%;
-    max-width: 300px;
-    margin: 0.4rem auto;
+  footer .footer-container .footer-columns .footer-column.newsletter form .suscribirme {
+    display: flex;
+    flex-direction: column;
   }
-  footer .footer-columns .footer-column .newsletter label {
-    font-size: 0.9rem;
-  }
-  footer .footer-columns .footer-bottom {
+  footer .footer-container .footer-bottom {
     flex-direction: row;
     gap: 1rem;
-    margin-top: 0.8rem;
   }
-  footer .footer-columns .footer-bottom a {
+  footer .footer-container .footer-bottom a {
     font-size: 0.7rem;
   }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  footer {
+    padding: 2rem 4rem;
+  }
+  footer .footer-container .footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+  }
+  footer .footer-container .footer-columns .footer-column {
+    width: 48%;
+  }
+  footer .footer-container .footer-columns .footer-column.festival {
+    order: 1;
+  }
+  footer .footer-container .footer-columns .footer-column.ayuda {
+    order: 2;
+  }
+  footer .footer-container .footer-columns .footer-column.redes {
+    order: 3;
+  }
+  footer .footer-container .footer-columns .footer-column.newsletter {
+    order: 4;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */

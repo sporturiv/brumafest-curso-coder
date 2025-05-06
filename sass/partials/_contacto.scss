@@ -1,11 +1,10 @@
 //Variables y estilos generales
-@use "partials/variables" as *;
-@use "partials/base" as *;
+@use "variables" as *;
+@use "base" as *;
 
 //CONTACTO
 .contacto {
     margin-bottom: 6rem;
-  
     section {
         h1 {
             font-size: 4rem;
@@ -64,21 +63,14 @@
                 }
             }
     
-            button[type="submit"] {
+            button {
                 align-self: flex-start;
-                background-color: $color-blanco;
-                color: $color-tarjetas;
                 font-weight: bold;
                 border: none;
                 border-radius: 4px;
                 padding: 0.75rem 1.5rem;
                 font-size: 1rem;
                 cursor: pointer;
-                transition: background-color 0.3s, box-shadow 0.3s;
-        
-                &:hover {
-                    box-shadow: $sombra-hover;
-                }
             }
         }
     }
