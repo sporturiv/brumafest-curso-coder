@@ -5,25 +5,15 @@
 //CONTACTO
 .contacto {
     margin-bottom: 6rem;
-    section {
-        h1 {
-            font-size: 4rem;
-            font-family: $tipografia-titulos;
-            margin-bottom: 1.5rem;
-        }
-    
-        p {
-            font-size: 1.1rem;
-            font-family: $tipografia-principal;
-            max-width: 800px;
-        }
-    }
   
     .formulario {
         border-radius: 10px;
         background-color: $color-tarjetas;
         padding: 2rem;
-        margin-top: 2rem;
+        margin: 2rem 0;
+        max-width: 50vw;
+        margin-left: auto;
+        margin-right: auto;
     
         form {
             display: flex;
@@ -31,7 +21,7 @@
             gap: 2rem;
             color: $color-blanco;
             font-family: $tipografia-principal;
-            font-weight: bold;
+
             font-size: 1.2rem;
     
             h2 {
@@ -42,11 +32,7 @@
     
             div {
                 display: flex;
-                flex-direction: column;
-        
-                label {
-                    margin-bottom: 0.5rem;
-                }
+                flex-direction: column;      
         
                 input, select, textarea {
                     width: 100%;
@@ -56,6 +42,11 @@
                     margin-top: 12px;
                     font-size: 1rem;
                     font-family: $tipografia-principal;
+                    font-style: italic;
+                }
+                
+                select {
+                    font-style: normal;
                 }
         
                 textarea {
