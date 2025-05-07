@@ -64,7 +64,7 @@ section {
 }
 
 .fondo-contenedor {
-  background-color: rgb(222, 218, 255);
+  background-color: rgb(203, 199, 238);
   width: 100%;
   box-sizing: border-box;
   padding: 1.5rem 0;
@@ -336,7 +336,7 @@ footer .footer-container .footer-bottom a {
   padding: 0.3rem 0.5rem;
 }
 .escenario-container .escenario li:nth-child(even) {
-  background-color: rgb(222, 218, 255);
+  background-color: rgb(203, 199, 238);
   border-radius: 4px;
   color: #000000;
 }
@@ -347,7 +347,11 @@ footer .footer-container .footer-bottom a {
 }
 
 .domingo {
-  background-color: rgb(222, 218, 255);
+  background-color: rgb(203, 199, 238);
+}
+
+.sabado {
+  background-color: lavender;
 }
 
 .artistas-destacados {
@@ -391,14 +395,14 @@ footer .footer-container .footer-bottom a {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   padding: 2rem 0;
-  justify-items: left;
+  justify-items: start;
 }
 .artistas-grid .artista-mini {
   display: flex;
-  flex-direction: row;
-  gap: 20px;
-  align-items: center;
-  width: 100%;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
 }
 .artistas-grid .artista-mini .artista-mini-datos {
   display: flex;
@@ -419,7 +423,6 @@ footer .footer-container .footer-bottom a {
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 0.5rem;
-  border: 1px solid #000000;
 }
 .artistas-grid .artista-mini p {
   font-weight: bold;
@@ -427,7 +430,6 @@ footer .footer-container .footer-bottom a {
 }
 .artistas-grid .artista-mini .redes {
   display: flex;
-  justify-content: left;
   gap: 0.4rem;
 }
 .artistas-grid .artista-mini .redes img {
@@ -721,15 +723,51 @@ section .preguntas-frecuentes .accordion .accordion-item .accordion-body {
 }
 
 @media (max-width: 767px) {
-  .artistas-destacados {
+  .artistas-dia-container {
+    padding: 2.5rem 1.5rem;
     flex-direction: column;
   }
-  .artistas-grid {
-    grid-template-columns: repeat(1, 1fr);
+  .artistas-dia-container .artistas-destacados .artista {
+    flex: 1 1 100% !important;
+  }
+  .artistas-dia-container .artistas-destacados .artista p {
+    font-size: 0.9rem;
+  }
+  .artistas-dia-container .artistas-grid {
+    display: none !important;
+  }
+  .artistas-dia-container .carousel-inner .carousel-item .artista-mini {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+  .artistas-dia-container .carousel-inner .carousel-item .artista-mini img {
+    width: 100%;
+    max-width: 70px;
+    max-height: 70px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+  }
+  .artistas-dia-container .carousel-inner .carousel-item .artista-mini .redes img {
+    width: 32px;
+    height: 32px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .artistas-grid {
+  .artistas-dia-container {
+    padding: 3rem 4rem;
+  }
+  .artistas-dia-container .artistas-destacados {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .artistas-dia-container .artistas-destacados .artista:nth-child(1) {
+    grid-column: 1/-1;
+  }
+  .artistas-dia-container .artistas-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
