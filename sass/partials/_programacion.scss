@@ -3,27 +3,30 @@
 @use "base" as *;
 
 //PROGRAMACIÓN
-.banner img {
-    width: 100%;
-    height: 55vh;
-    object-fit: cover;
-    border-radius: 8px;
-}
+.banner {
+    img {
+      width: 100%;
+      height: 55vh;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
 
-#carrusel-sabado, #carrusel-domingo {
-  display: none;
-}
+  #carrusel-sabado, #carrusel-domingo {
+    display: none;
+  }
 
 .escenario-container {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     
     .escenario {
         background-color: $color-tarjetas;
         color: $color-blanco;
-        padding: 1rem;
+        padding: 1.2rem;
         border-radius: 8px;
+        padding-bottom: 0.4rem;
 
         h4 {
             margin-bottom: 24px;
@@ -32,19 +35,31 @@
         ul {
             list-style: none;
             padding: 0;
-        }
 
-        li {
-            font-size: 1.1rem;
-            margin-bottom: 12px;
-            font-weight: bold;
-            padding: 0.3rem 0.5rem;
+            li {
+                margin:0 ;
+                font-weight: bold;
+                padding: 0.7rem 0.8rem;
+                display: flex;
+                flex-direction: column;
+    
+                &:nth-child(odd) {
+                    background-color: $color-fondo-violeta;
+                    border-radius: 4px;
+                    color: $color-negro;
+                    padding: 0.67em 0.8rem;
+                }
 
-            &:nth-child(even) {
-                background-color: $color-fondo-violeta;
-                border-radius: 4px;
-                color: $color-negro;
+                p {
+                    font-size: 1.3rem;
+                    margin: 0 ;
+                }
+
+                .hora {
+                    font-size: 0.9rem;
+                    margin-bottom: 0.2rem;
+                }
             }
-        }
+        }  
     }
 }

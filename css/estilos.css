@@ -319,8 +319,9 @@ footer .footer-container .footer-bottom a {
 .escenario-container .escenario {
   background-color: darkslateblue;
   color: #ffffff;
-  padding: 1rem;
+  padding: 1.2rem;
   border-radius: 8px;
+  padding-bottom: 0.4rem;
 }
 .escenario-container .escenario h4 {
   margin-bottom: 24px;
@@ -329,16 +330,26 @@ footer .footer-container .footer-bottom a {
   list-style: none;
   padding: 0;
 }
-.escenario-container .escenario li {
-  font-size: 1.1rem;
-  margin-bottom: 12px;
+.escenario-container .escenario ul li {
+  margin: 0;
   font-weight: bold;
-  padding: 0.3rem 0.5rem;
+  padding: 0.7rem 0.8rem;
+  display: flex;
+  flex-direction: column;
 }
-.escenario-container .escenario li:nth-child(even) {
+.escenario-container .escenario ul li:nth-child(odd) {
   background-color: rgb(203, 199, 238);
   border-radius: 4px;
   color: #000000;
+  padding: 0.67em 0.8rem;
+}
+.escenario-container .escenario ul li p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+.escenario-container .escenario ul li .hora {
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
 }
 
 .artistas-dia-container {
@@ -703,6 +714,41 @@ section .preguntas-frecuentes .accordion .accordion-item .accordion-body {
   .programacion #carrusel-sabado, .programacion #carrusel-domingo {
     display: block;
   }
+  .programacion #carrusel-sabado .carousel-inner .carousel-item .escenario, .programacion #carrusel-domingo .carousel-inner .carousel-item .escenario {
+    background-color: darkslateblue;
+    color: #ffffff;
+    padding: 1.2rem;
+    border-radius: 8px;
+    padding-bottom: 0.1rem;
+  }
+  .programacion #carrusel-sabado .carousel-inner .carousel-item .escenario h4, .programacion #carrusel-domingo .carousel-inner .carousel-item .escenario h4 {
+    margin-bottom: 8px;
+  }
+  .programacion #carrusel-sabado .carousel-inner .carousel-item .escenario ul, .programacion #carrusel-domingo .carousel-inner .carousel-item .escenario ul {
+    list-style: none;
+    padding: 0;
+  }
+  .programacion #carrusel-sabado .carousel-inner .carousel-item .escenario ul li, .programacion #carrusel-domingo .carousel-inner .carousel-item .escenario ul li {
+    margin: 0;
+    font-weight: bold;
+    padding: 0.4rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .programacion #carrusel-sabado .carousel-inner .carousel-item .escenario ul li:nth-child(odd), .programacion #carrusel-domingo .carousel-inner .carousel-item .escenario ul li:nth-child(odd) {
+    background-color: rgb(203, 199, 238);
+    border-radius: 4px;
+    color: #000000;
+    padding: 0.4rem 0.5rem;
+  }
+  .programacion #carrusel-sabado .carousel-inner .carousel-item .escenario ul li p, .programacion #carrusel-domingo .carousel-inner .carousel-item .escenario ul li p {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+  .programacion #carrusel-sabado .carousel-inner .carousel-item .escenario ul li .hora, .programacion #carrusel-domingo .carousel-inner .carousel-item .escenario ul li .hora {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+  }
   .programacion .escenario-container {
     display: none;
   }
@@ -720,8 +766,16 @@ section .preguntas-frecuentes .accordion .accordion-item .accordion-body {
   .programacion .escenario-container .principal {
     grid-column: 1/3;
   }
+  .programacion .escenario-container .principal li {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: baseline;
+  }
+  .programacion .escenario-container .principal li .hora {
+    font-size: 1.1rem;
+  }
 }
-
 @media (max-width: 767px) {
   .artistas-dia-container {
     padding: 2.5rem 1.5rem;

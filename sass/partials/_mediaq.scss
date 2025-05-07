@@ -186,19 +186,67 @@ $bp-tablet-end: $bp-tablet + 1px ;
 
 
 // PROGRAMACIÓN
-.programacion {
-    @media (max-width: $bp-mobile) {
+//Móvil
+@media (max-width: $bp-mobile) {
+    .programacion {
         #carrusel-sabado, #carrusel-domingo { 
-            display: block; 
+            display: block;
+            .carousel-inner {
+                .carousel-item {
+                    .escenario {
+                        background-color: $color-tarjetas;
+                        color: $color-blanco;
+                        padding: 1.2rem;
+                        border-radius: 8px;
+                        padding-bottom: 0.1rem;
+                
+                        h4 {
+                            margin-bottom: 8px;
+                        }
+                
+                        ul {
+                            list-style: none;
+                            padding: 0;
+                
+                            li {
+                                margin:0 ;
+                                font-weight: bold;
+                                padding: 0.4rem 0.5rem;
+                                display: flex;
+                                flex-direction: column;
+                    
+                                &:nth-child(odd) {
+                                    background-color: $color-fondo-violeta;
+                                    border-radius: 4px;
+                                    color: $color-negro;
+                                    padding: 0.4rem 0.5rem;
+                                }
+
+                                p {
+                                    font-size: 1.1rem;
+                                    margin: 0 ;
+                                }
+
+                                .hora {
+                                    font-size: 0.8rem;
+                                    margin-bottom: 0.2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-    
+        
         .escenario-container {
             display: none ;
         }
     }
+}
 
-    // Tablet
-    @media (min-width: $bp-mobile-end) and (max-width: $bp-tablet) {
+// Tablet
+@media (min-width: $bp-mobile-end) and (max-width: $bp-tablet) {
+    .programacion {
         #carrusel-sabado, #carrusel-domingo { 
             display: none; 
         }
@@ -211,14 +259,22 @@ $bp-tablet-end: $bp-tablet + 1px ;
     
             .principal { 
                 grid-column: 1 / 3; 
+                li {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 24px;
+                    align-items: baseline;
+    
+                    .hora {
+                        font-size: 1.1rem;
+                    }
+                }
             }
         }
     }
 }
 
-
 // ARTISTAS
-  
 // Móvil
 @media (max-width: $bp-mobile) {
     .artistas-dia-container {
