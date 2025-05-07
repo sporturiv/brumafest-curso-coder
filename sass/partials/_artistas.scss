@@ -3,109 +3,111 @@
 @use "base" as *;
 
 //ARTISTAS
-.artistas-dia-container {
-    margin: 0;
-    padding: 3rem 10rem;
-}
-
-.domingo {
-    background-color: $color-fondo-violeta ;
-}
-
-.sabado {
-    background-color:lavender;
-}
-
-.artistas-destacados {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-
-    .artista {
-        background-color: $color-tarjetas ;
-        border-radius: 10px;
-        padding: 1.5rem;
-        flex: 1 1 calc(33% - 1.5rem);
-        text-align: left;
-        color: $color-blanco;
-        text-shadow: $color-negro 1px 1px ;
-        box-shadow: $sombra-baja;
-
-        p {
-            margin-bottom: 12px;
+.artistas {
+    .artistas-dia-container {
+        margin: 0;
+        padding: 3rem 10rem;
+    
+        &.domingo {
+            background-color: $color-fondo-violeta ;
         }
-
-        .imagen {
-            width: 100%;
-            aspect-ratio: 1.5 / 1;
-            object-fit: cover;
-            border-radius: 6px;
-            margin-bottom: 1rem;
-        }
-
-        .redes-iconos {
+        
+        &.sabado {
+            background-color:lavender;
+        }    
+    
+        .artistas-destacados {
             display: flex;
+            gap: 2rem;
             flex-wrap: wrap;
-            gap: 0.8rem;
-
-            img {
-                width: 32px;
-                height: 32px;
+            margin-bottom: 2rem;
+        
+            .artista {
+                background-color: $color-tarjetas ;
+                border-radius: 10px;
+                padding: 1.5rem;
+                flex: 1 1 calc(33% - 1.5rem);
+                text-align: left;
+                color: $color-blanco;
+                text-shadow: $color-negro 1px 1px ;
+                box-shadow: $sombra-baja;
+        
+                p {
+                    margin-bottom: 12px;
+                }
+        
+                .imagen {
+                    width: 100%;
+                    aspect-ratio: 1.5 / 1;
+                    object-fit: cover;
+                    border-radius: 6px;
+                    margin-bottom: 1rem;
+                }
+        
+                .redes-iconos {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 0.8rem;
+        
+                    img {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
             }
         }
-    }
-}
-
-.artistas-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    padding: 2rem 0;
-    justify-items: start;
-
-    .artista-mini {
-        display: flex;
-        align-items: flex-start;
-        gap: 1rem;
-        padding: 1rem;
-        border-radius: 8px;
-
-        .artista-mini-datos {
-            display: flex;
-            flex-direction: column;
-            text-align: start;
-            width: 100%;
-            gap: 8px;
-
-            h4 {
-                font-family: $tipografia-principal;
-                font-size: 1.2rem;
-            }
-        }
-
-        img {
-            width: 100%;
-            max-width: 80px;
-            max-height: 80px;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            border-radius: 6px;
-            margin-bottom: 0.5rem;
-        }
-
-        p {
-            font-weight: bold;
-            margin: 0.5rem 0;
-        }
-
-        .redes {
-            display: flex;
-            gap: 0.4rem;
-
-            img {
-                width: 32px;
-                height: 32px;
+        
+        .artistas-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            padding: 2rem 0;
+            justify-items: start;
+        
+            .artista-mini {
+                display: flex;
+                align-items: flex-start;
+                gap: 1rem;
+                padding: 1rem;
+                border-radius: 8px;
+        
+                .artista-mini-datos {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: start;
+                    width: 100%;
+                    gap: 8px;
+        
+                    h4 {
+                        font-family: $tipografia-principal;
+                        font-size: 1.2rem;
+                    }
+                }
+        
+                img {
+                    width: 100%;
+                    max-width: 80px;
+                    max-height: 80px;
+                    aspect-ratio: 1 / 1;
+                    object-fit: cover;
+                    border-radius: 6px;
+                    margin-bottom: 0.5rem;
+                }
+        
+                p {
+                    font-weight: bold;
+                    margin: 0.5rem 0;
+                }
+        
+                .redes {
+                    display: flex;
+                    gap: 0.4rem;
+        
+                    img {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
             }
         }
     }

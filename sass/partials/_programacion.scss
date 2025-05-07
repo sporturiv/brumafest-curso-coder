@@ -3,63 +3,85 @@
 @use "base" as *;
 
 //PROGRAMACIÓN
-.banner {
-    img {
-      width: 100%;
-      height: 55vh;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-  }
-
-  #carrusel-sabado, #carrusel-domingo {
-    display: none;
-  }
-
-.escenario-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    
-    .escenario {
-        background-color: $color-tarjetas;
-        color: $color-blanco;
-        padding: 1.2rem;
-        border-radius: 8px;
-        padding-bottom: 0.4rem;
-
-        h4 {
-            margin-bottom: 24px;
+.programacion {
+    .banner {
+        img {
+            width: 100%;
+            height: 55vh;
+            object-fit: cover;
+            border-radius: 8px;
         }
-
-        ul {
-            list-style: none;
-            padding: 0;
-
-            li {
-                margin:0 ;
-                font-weight: bold;
-                padding: 0.7rem 0.8rem;
-                display: flex;
-                flex-direction: column;
+    }
     
-                &:nth-child(odd) {
-                    background-color: $color-fondo-violeta;
-                    border-radius: 4px;
-                    color: $color-negro;
-                    padding: 0.67em 0.8rem;
+    #carrusel-sabado, #carrusel-domingo {
+        display: none;
+    }
+    
+    .programacion-dia-container {
+        margin: 0;
+        padding:  5rem 10rem ;
+        
+        &.domingo {
+            background-color: $color-fondo-violeta ;
+        }
+            
+        &.sabado {
+            background-color:lavender;
+        }
+        
+        .escenario-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+                
+            .escenario {
+                background-color: $color-tarjetas;
+                color: $color-blanco;
+                padding: 1.2rem;
+                border-radius: 16px;
+                padding-bottom: 0.4rem;
+            
+                h4 {
+                    margin-bottom: 24px;
                 }
-
-                p {
-                    font-size: 1.3rem;
-                    margin: 0 ;
-                }
-
-                .hora {
-                    font-size: 0.9rem;
-                    margin-bottom: 0.2rem;
-                }
+            
+                ul {
+                    list-style: none;
+                    padding: 0;
+            
+                    li {
+                        margin:0 ;
+                        font-weight: bold;
+                        padding: 0.6rem 0.8rem;
+                        display: flex;
+                        flex-direction: column;
+                        background-color: rgb(202, 219, 252);
+                        color: $color-negro;
+                        border-radius: 10px;
+                        margin-bottom: 8px;
+                
+                        &:nth-child(odd) {
+                            background-color:rgb(249, 240, 255) ;
+                            border-radius: 10px;
+                            padding: 0.6rem 0.8rem;
+                        }
+            
+                        p {
+                            font-size: 1.3rem;
+                            margin: 0 ;
+                        }
+            
+                        .hora {
+                            font-size: 0.9rem;
+                            margin-bottom: 0.2rem;
+                        }
+                    }
+                }  
             }
-        }  
+        }
     }
 }
+
+
+
+

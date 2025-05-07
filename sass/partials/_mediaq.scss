@@ -189,57 +189,64 @@ $bp-tablet-end: $bp-tablet + 1px ;
 //Móvil
 @media (max-width: $bp-mobile) {
     .programacion {
-        #carrusel-sabado, #carrusel-domingo { 
-            display: block;
-            .carousel-inner {
-                .carousel-item {
-                    .escenario {
-                        background-color: $color-tarjetas;
-                        color: $color-blanco;
-                        padding: 1.2rem;
-                        border-radius: 8px;
-                        padding-bottom: 0.1rem;
-                
-                        h4 {
-                            margin-bottom: 8px;
-                        }
-                
-                        ul {
-                            list-style: none;
-                            padding: 0;
-                
-                            li {
-                                margin:0 ;
-                                font-weight: bold;
-                                padding: 0.4rem 0.5rem;
-                                display: flex;
-                                flex-direction: column;
+        .programacion-dia-container {
+            padding: 2.5rem 1.5rem;
+            #carrusel-sabado, #carrusel-domingo { 
+                display: block;
+                .carousel-inner {
+                    .carousel-item {
+                        .escenario {
+                            background-color: $color-tarjetas;
+                            color: $color-blanco;
+                            padding: 1.2rem;
+                            border-radius: 16px;
+                            padding-bottom: 0.1rem;
                     
-                                &:nth-child(odd) {
-                                    background-color: $color-fondo-violeta;
-                                    border-radius: 4px;
-                                    color: $color-negro;
+                            h4 {
+                                margin-bottom: 8px;
+                            }
+                    
+                            ul {
+                                list-style: none;
+                                padding: 0;
+                    
+                                li {
+                                    margin:0 ;
+                                    font-weight: bold;
                                     padding: 0.4rem 0.5rem;
-                                }
-
-                                p {
-                                    font-size: 1.1rem;
-                                    margin: 0 ;
-                                }
-
-                                .hora {
-                                    font-size: 0.8rem;
-                                    margin-bottom: 0.2rem;
+                                    display: flex;
+                                    flex-direction: column;
+                                    background-color: rgb(202, 219, 252);
+                                    color: $color-negro;
+                                    border-radius: 10px;
+                                    margin-bottom: 8px;
+                        
+                                    &:nth-child(odd) {
+                                        background-color:rgb(249, 240, 255) ;
+                                        border-radius: 8px;
+                                        color: $color-negro;
+                                        padding: 0.4rem 0.5rem;
+                                    }
+    
+                                    p {
+                                        font-size: 1.1rem;
+                                        margin: 0 ;
+                                    }
+    
+                                    .hora {
+                                        font-size: 0.8rem;
+                                        margin-bottom: 0.2rem;
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
-        }
-        
-        .escenario-container {
-            display: none ;
+            
+            .escenario-container {
+                display: none ;
+            }
         }
     }
 }
@@ -250,23 +257,41 @@ $bp-tablet-end: $bp-tablet + 1px ;
         #carrusel-sabado, #carrusel-domingo { 
             display: none; 
         }
-    
-        .escenario-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto auto;
-            gap: 1rem;
-    
-            .principal { 
-                grid-column: 1 / 3; 
-                li {
-                    display: flex;
-                    flex-direction: row;
-                    gap: 24px;
-                    align-items: baseline;
-    
-                    .hora {
-                        font-size: 1.1rem;
+
+        .programacion-dia-container {
+            padding: 4rem 4rem ;
+
+            .escenario-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto;
+                gap: 1rem;
+
+                .principal { 
+                    grid-column: 1 / 3; 
+                    li {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 0.1rem;
+                        align-items: baseline;
+        
+                        .hora {
+                            font-size: 1.1rem;
+                            margin-bottom: 0.2rem;
+                        }
+                    }
+                }
+
+                .secundario {
+                    ul {
+                        list-style: none;
+                        padding: 0;
+                
+                        li {
+                            p {
+                                font-size: 1.1rem;
+                            }
+                        }
                     }
                 }
             }

@@ -300,78 +300,86 @@ footer .footer-container .footer-bottom a {
   color: #640D5F;
 }
 
-.banner img {
+.programacion .banner img {
   width: 100%;
   height: 55vh;
   object-fit: cover;
   border-radius: 8px;
 }
-
-#carrusel-sabado, #carrusel-domingo {
+.programacion #carrusel-sabado, .programacion #carrusel-domingo {
   display: none;
 }
-
-.escenario-container {
+.programacion .programacion-dia-container {
+  margin: 0;
+  padding: 5rem 10rem;
+}
+.programacion .programacion-dia-container.domingo {
+  background-color: rgb(203, 199, 238);
+}
+.programacion .programacion-dia-container.sabado {
+  background-color: lavender;
+}
+.programacion .programacion-dia-container .escenario-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
 }
-.escenario-container .escenario {
+.programacion .programacion-dia-container .escenario-container .escenario {
   background-color: darkslateblue;
   color: #ffffff;
   padding: 1.2rem;
-  border-radius: 8px;
+  border-radius: 16px;
   padding-bottom: 0.4rem;
 }
-.escenario-container .escenario h4 {
+.programacion .programacion-dia-container .escenario-container .escenario h4 {
   margin-bottom: 24px;
 }
-.escenario-container .escenario ul {
+.programacion .programacion-dia-container .escenario-container .escenario ul {
   list-style: none;
   padding: 0;
 }
-.escenario-container .escenario ul li {
+.programacion .programacion-dia-container .escenario-container .escenario ul li {
   margin: 0;
   font-weight: bold;
-  padding: 0.7rem 0.8rem;
+  padding: 0.6rem 0.8rem;
   display: flex;
   flex-direction: column;
-}
-.escenario-container .escenario ul li:nth-child(odd) {
-  background-color: rgb(203, 199, 238);
-  border-radius: 4px;
+  background-color: rgb(202, 219, 252);
   color: #000000;
-  padding: 0.67em 0.8rem;
+  border-radius: 10px;
+  margin-bottom: 8px;
 }
-.escenario-container .escenario ul li p {
+.programacion .programacion-dia-container .escenario-container .escenario ul li:nth-child(odd) {
+  background-color: rgb(249, 240, 255);
+  border-radius: 10px;
+  padding: 0.6rem 0.8rem;
+}
+.programacion .programacion-dia-container .escenario-container .escenario ul li p {
   font-size: 1.3rem;
   margin: 0;
 }
-.escenario-container .escenario ul li .hora {
+.programacion .programacion-dia-container .escenario-container .escenario ul li .hora {
   font-size: 0.9rem;
   margin-bottom: 0.2rem;
 }
 
-.artistas-dia-container {
+.artistas .artistas-dia-container {
   margin: 0;
   padding: 3rem 10rem;
 }
-
-.domingo {
+.artistas .artistas-dia-container.domingo {
   background-color: rgb(203, 199, 238);
 }
-
-.sabado {
+.artistas .artistas-dia-container.sabado {
   background-color: lavender;
 }
-
-.artistas-destacados {
+.artistas .artistas-dia-container .artistas-destacados {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
-.artistas-destacados .artista {
+.artistas .artistas-dia-container .artistas-destacados .artista {
   background-color: darkslateblue;
   border-radius: 10px;
   padding: 1.5rem;
@@ -381,52 +389,51 @@ footer .footer-container .footer-bottom a {
   text-shadow: #000000 1px 1px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-.artistas-destacados .artista p {
+.artistas .artistas-dia-container .artistas-destacados .artista p {
   margin-bottom: 12px;
 }
-.artistas-destacados .artista .imagen {
+.artistas .artistas-dia-container .artistas-destacados .artista .imagen {
   width: 100%;
   aspect-ratio: 1.5/1;
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 1rem;
 }
-.artistas-destacados .artista .redes-iconos {
+.artistas .artistas-dia-container .artistas-destacados .artista .redes-iconos {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
 }
-.artistas-destacados .artista .redes-iconos img {
+.artistas .artistas-dia-container .artistas-destacados .artista .redes-iconos img {
   width: 32px;
   height: 32px;
 }
-
-.artistas-grid {
+.artistas .artistas-dia-container .artistas-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   padding: 2rem 0;
   justify-items: start;
 }
-.artistas-grid .artista-mini {
+.artistas .artistas-dia-container .artistas-grid .artista-mini {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
   padding: 1rem;
   border-radius: 8px;
 }
-.artistas-grid .artista-mini .artista-mini-datos {
+.artistas .artistas-dia-container .artistas-grid .artista-mini .artista-mini-datos {
   display: flex;
   flex-direction: column;
   text-align: start;
   width: 100%;
   gap: 8px;
 }
-.artistas-grid .artista-mini .artista-mini-datos h4 {
+.artistas .artistas-dia-container .artistas-grid .artista-mini .artista-mini-datos h4 {
   font-family: "Inter", sans-serif;
   font-size: 1.2rem;
 }
-.artistas-grid .artista-mini img {
+.artistas .artistas-dia-container .artistas-grid .artista-mini img {
   width: 100%;
   max-width: 80px;
   max-height: 80px;
@@ -435,15 +442,15 @@ footer .footer-container .footer-bottom a {
   border-radius: 6px;
   margin-bottom: 0.5rem;
 }
-.artistas-grid .artista-mini p {
+.artistas .artistas-dia-container .artistas-grid .artista-mini p {
   font-weight: bold;
   margin: 0.5rem 0;
 }
-.artistas-grid .artista-mini .redes {
+.artistas .artistas-dia-container .artistas-grid .artista-mini .redes {
   display: flex;
   gap: 0.4rem;
 }
-.artistas-grid .artista-mini .redes img {
+.artistas .artistas-dia-container .artistas-grid .artista-mini .redes img {
   width: 32px;
   height: 32px;
 }
@@ -711,45 +718,52 @@ section .preguntas-frecuentes .accordion .accordion-item .accordion-body {
   }
 }
 @media (max-width: 767px) {
-  .programacion #carrusel-sabado, .programacion #carrusel-domingo {
+  .programacion .programacion-dia-container {
+    padding: 2.5rem 1.5rem;
+  }
+  .programacion .programacion-dia-container #carrusel-sabado, .programacion .programacion-dia-container #carrusel-domingo {
     display: block;
   }
-  .programacion #carrusel-sabado .carousel-inner .carousel-item .escenario, .programacion #carrusel-domingo .carousel-inner .carousel-item .escenario {
+  .programacion .programacion-dia-container #carrusel-sabado .carousel-inner .carousel-item .escenario, .programacion .programacion-dia-container #carrusel-domingo .carousel-inner .carousel-item .escenario {
     background-color: darkslateblue;
     color: #ffffff;
     padding: 1.2rem;
-    border-radius: 8px;
+    border-radius: 16px;
     padding-bottom: 0.1rem;
   }
-  .programacion #carrusel-sabado .carousel-inner .carousel-item .escenario h4, .programacion #carrusel-domingo .carousel-inner .carousel-item .escenario h4 {
+  .programacion .programacion-dia-container #carrusel-sabado .carousel-inner .carousel-item .escenario h4, .programacion .programacion-dia-container #carrusel-domingo .carousel-inner .carousel-item .escenario h4 {
     margin-bottom: 8px;
   }
-  .programacion #carrusel-sabado .carousel-inner .carousel-item .escenario ul, .programacion #carrusel-domingo .carousel-inner .carousel-item .escenario ul {
+  .programacion .programacion-dia-container #carrusel-sabado .carousel-inner .carousel-item .escenario ul, .programacion .programacion-dia-container #carrusel-domingo .carousel-inner .carousel-item .escenario ul {
     list-style: none;
     padding: 0;
   }
-  .programacion #carrusel-sabado .carousel-inner .carousel-item .escenario ul li, .programacion #carrusel-domingo .carousel-inner .carousel-item .escenario ul li {
+  .programacion .programacion-dia-container #carrusel-sabado .carousel-inner .carousel-item .escenario ul li, .programacion .programacion-dia-container #carrusel-domingo .carousel-inner .carousel-item .escenario ul li {
     margin: 0;
     font-weight: bold;
     padding: 0.4rem 0.5rem;
     display: flex;
     flex-direction: column;
+    background-color: rgb(202, 219, 252);
+    color: #000000;
+    border-radius: 10px;
+    margin-bottom: 8px;
   }
-  .programacion #carrusel-sabado .carousel-inner .carousel-item .escenario ul li:nth-child(odd), .programacion #carrusel-domingo .carousel-inner .carousel-item .escenario ul li:nth-child(odd) {
-    background-color: rgb(203, 199, 238);
-    border-radius: 4px;
+  .programacion .programacion-dia-container #carrusel-sabado .carousel-inner .carousel-item .escenario ul li:nth-child(odd), .programacion .programacion-dia-container #carrusel-domingo .carousel-inner .carousel-item .escenario ul li:nth-child(odd) {
+    background-color: rgb(249, 240, 255);
+    border-radius: 8px;
     color: #000000;
     padding: 0.4rem 0.5rem;
   }
-  .programacion #carrusel-sabado .carousel-inner .carousel-item .escenario ul li p, .programacion #carrusel-domingo .carousel-inner .carousel-item .escenario ul li p {
+  .programacion .programacion-dia-container #carrusel-sabado .carousel-inner .carousel-item .escenario ul li p, .programacion .programacion-dia-container #carrusel-domingo .carousel-inner .carousel-item .escenario ul li p {
     font-size: 1.1rem;
     margin: 0;
   }
-  .programacion #carrusel-sabado .carousel-inner .carousel-item .escenario ul li .hora, .programacion #carrusel-domingo .carousel-inner .carousel-item .escenario ul li .hora {
+  .programacion .programacion-dia-container #carrusel-sabado .carousel-inner .carousel-item .escenario ul li .hora, .programacion .programacion-dia-container #carrusel-domingo .carousel-inner .carousel-item .escenario ul li .hora {
     font-size: 0.8rem;
     margin-bottom: 0.2rem;
   }
-  .programacion .escenario-container {
+  .programacion .programacion-dia-container .escenario-container {
     display: none;
   }
 }
@@ -757,22 +771,33 @@ section .preguntas-frecuentes .accordion .accordion-item .accordion-body {
   .programacion #carrusel-sabado, .programacion #carrusel-domingo {
     display: none;
   }
-  .programacion .escenario-container {
+  .programacion .programacion-dia-container {
+    padding: 4rem 4rem;
+  }
+  .programacion .programacion-dia-container .escenario-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 1rem;
   }
-  .programacion .escenario-container .principal {
+  .programacion .programacion-dia-container .escenario-container .principal {
     grid-column: 1/3;
   }
-  .programacion .escenario-container .principal li {
+  .programacion .programacion-dia-container .escenario-container .principal li {
     display: flex;
     flex-direction: row;
-    gap: 24px;
+    gap: 0.1rem;
     align-items: baseline;
   }
-  .programacion .escenario-container .principal li .hora {
+  .programacion .programacion-dia-container .escenario-container .principal li .hora {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+  }
+  .programacion .programacion-dia-container .escenario-container .secundario ul {
+    list-style: none;
+    padding: 0;
+  }
+  .programacion .programacion-dia-container .escenario-container .secundario ul li p {
     font-size: 1.1rem;
   }
 }
