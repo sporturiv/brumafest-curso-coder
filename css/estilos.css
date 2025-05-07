@@ -60,7 +60,7 @@ body {
 
 section {
   text-align: start;
-  margin: 6rem 10rem;
+  margin: 4rem 10rem;
 }
 
 .fondo-contenedor {
@@ -311,7 +311,7 @@ footer .footer-container .footer-bottom a {
 }
 .programacion .programacion-dia-container {
   margin: 0;
-  padding: 5rem 10rem;
+  padding: 4rem 10rem;
 }
 .programacion .programacion-dia-container.domingo {
   background-color: rgb(203, 199, 238);
@@ -365,7 +365,7 @@ footer .footer-container .footer-bottom a {
 
 .artistas .artistas-dia-container {
   margin: 0;
-  padding: 3rem 10rem;
+  padding: 4rem 10rem;
 }
 .artistas .artistas-dia-container.domingo {
   background-color: rgb(203, 199, 238);
@@ -455,73 +455,78 @@ footer .footer-container .footer-bottom a {
   height: 32px;
 }
 
-section {
+.entradas .entradas-container {
   display: flex;
-  flex-direction: column;
-  gap: 48px;
-}
-section .entradas-container {
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  gap: 40px;
+  gap: 2rem;
 }
-section .entradas-container .entrada {
+.entradas .entradas-container .entrada {
+  flex: 1;
   background-color: darkslateblue;
   border-radius: 10px;
   color: #ffffff;
-  text-shadow: #000000 1px 1px;
-  width: 100%;
-  text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  padding: 32px 32px;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-align: center;
 }
-section .entradas-container .entrada div h3 {
-  font-size: 8rem;
+.entradas .entradas-container .entrada h2 {
+  margin-bottom: 0;
+  font-weight: normal;
 }
-section .entradas-container .entrada div h4 {
-  text-align: left;
+.entradas .entradas-container .entrada h3 {
+  font-size: 7rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
 }
-section .entradas-container .entrada ul li {
-  text-align: left;
-  margin: 8px 16px;
-}
-section .entradas-container .entrada button {
-  margin-top: 40px;
-  width: 100%;
-}
-section .entradas-container .entrada .entradas-datos {
+.entradas .entradas-container .entrada .entrada-datos {
   background-color: #f3f4f8;
   color: #000000;
-  text-shadow: none;
-  padding: 16px;
+  padding: 1rem;
   border-radius: 8px;
+  margin-bottom: 1.5rem;
 }
-section .preguntas-frecuentes {
-  display: flex;
-  flex-direction: column;
+.entradas .entradas-container .entrada .entrada-datos h4 {
+  text-align: left;
+  margin-bottom: 0.2rem;
+  font-size: 1.6rem;
 }
-section .preguntas-frecuentes h2 {
-  margin-bottom: 0;
+.entradas .entradas-container .entrada .entrada-datos ul li {
+  text-align: left;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
 }
-section .preguntas-frecuentes .accordion {
+.entradas .entradas-container .entrada button {
+  margin-top: auto;
+  width: 100%;
+}
+.entradas #carrusel-entradas {
+  display: none;
+}
+.entradas .preguntas-frecuentes {
+  margin-top: 3rem;
+}
+.entradas .preguntas-frecuentes h2 {
+  font-family: "Bebas Neue", sans-serif;
+  margin-bottom: 1rem;
+}
+.entradas .preguntas-frecuentes .accordion {
   border-radius: 10px;
   overflow: hidden;
 }
-section .preguntas-frecuentes .accordion .accordion-item {
+.entradas .preguntas-frecuentes .accordion .accordion-item {
   margin-bottom: 0 !important;
 }
-section .preguntas-frecuentes .accordion .accordion-item .accordion-header button {
-  padding: 1rem 1.25rem;
+.entradas .preguntas-frecuentes .accordion .accordion-item .accordion-header button {
+  padding: 1.5rem 2.5rem;
   font-weight: normal;
-  font-size: 4rem;
+  font-size: 2rem;
 }
-section .preguntas-frecuentes .accordion .accordion-item .accordion-body {
+.entradas .preguntas-frecuentes .accordion .accordion-item .accordion-body {
   font-size: 1.2rem;
-  padding: 16px 48px;
+  padding: 1.5rem 2.5rem;
 }
 
 .contacto {
@@ -813,7 +818,7 @@ section .preguntas-frecuentes .accordion .accordion-item .accordion-body {
     font-size: 0.9rem;
   }
   .artistas-dia-container .artistas-grid {
-    display: none !important;
+    display: none;
   }
   .artistas-dia-container .carousel-inner .carousel-item .artista-mini {
     display: flex !important;
@@ -836,7 +841,7 @@ section .preguntas-frecuentes .accordion .accordion-item .accordion-body {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .artistas-dia-container {
-    padding: 3rem 4rem;
+    padding: 4rem 4rem;
   }
   .artistas-dia-container .artistas-destacados {
     display: grid;
@@ -852,16 +857,84 @@ section .preguntas-frecuentes .accordion .accordion-item .accordion-body {
 }
 @media (max-width: 767px) {
   .entradas .entradas-container {
+    display: none;
+  }
+  .entradas #carrusel-entradas {
+    display: block;
+    margin-bottom: 3rem;
+    padding: 0 1.5rem;
+  }
+  .entradas #carrusel-entradas .carousel-inner .carousel-item .entrada {
+    flex: 1;
+    background-color: darkslateblue;
+    border-radius: 16px;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 1.2rem;
+    display: flex;
     flex-direction: column;
-    gap: 2rem;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .entradas #carrusel-entradas .carousel-inner .carousel-item .entrada h2 {
+    margin-bottom: 0;
+    font-weight: normal;
+  }
+  .entradas #carrusel-entradas .carousel-inner .carousel-item .entrada h3 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  .entradas #carrusel-entradas .carousel-inner .carousel-item .entrada .entrada-datos {
+    background-color: #f3f4f8;
+    color: #000000;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+  .entradas #carrusel-entradas .carousel-inner .carousel-item .entrada .entrada-datos h4 {
+    text-align: left;
+    margin-bottom: 0.2rem;
+    font-size: 1.6rem;
+  }
+  .entradas #carrusel-entradas .carousel-inner .carousel-item .entrada .entrada-datos ul li {
+    text-align: left;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    list-style: none;
+  }
+  .entradas #carrusel-entradas .carousel-inner .carousel-item .entrada button {
+    margin-top: auto;
+    width: 100%;
   }
   .entradas .preguntas-frecuentes .accordion-header button {
-    font-size: 1.5rem;
-    padding: 24px 16px;
+    font-size: 1.3rem !important;
+    padding: 1.2rem 1.5rem !important;
   }
   .entradas .preguntas-frecuentes .accordion-body {
-    font-size: 0.9rem;
-    padding: 16px;
+    font-size: 1rem !important;
+    padding: 1.2rem 1.5rem !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .entradas #carrusel-entradas {
+    display: none !important;
+  }
+  .entradas .entradas-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+  .entradas .entradas-container .entrada:nth-child(3) {
+    grid-column: 1/span 2;
+  }
+  .entradas .preguntas-frecuentes .accordion-header button {
+    font-size: 1.5rem !important;
+    padding: 1.2rem 1.8rem !important;
+  }
+  .entradas .preguntas-frecuentes .accordion-body {
+    font-size: 1rem !important;
+    padding: 1.2rem 1.8rem !important;
   }
 }
 @media (max-width: 767px) {

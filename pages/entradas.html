@@ -35,53 +35,118 @@
     <main class="entradas">
         <section>
             <h1>Entradas</h1>
-            <div class="entradas-container">
-                <div class="entrada">
-                    <h2>Sábado</h2>
-                    <h3>26/8</h3>
-                    <div class="entradas-datos">
-                        <h4>¿Qué incluye?</h4>
-                        <ul>
-                            <li>Acceso a todos los escenarios</li>
-                            <li>Zona de comidas y bebidas</li>
-                            <li>Zona de descanso</li>
-                        </ul>
-                    </div>
-                    <button>Comprar entradas</button>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non at minima delectus aut ipsa magni consectetur quos asperiores, quam cum voluptate neque exercitationem velit, molestias unde similique sapiente reprehenderit dolores.</p>
+        </section>
+        <section class="entradas-container">
+            <div class="entrada sabado">
+                <h2>Sábado</h2>
+                <h3>26/8</h3>
+                <div class="entrada-datos">
+                    <h4>¿Qué incluye?</h4>
+                    <ul>
+                        <li>Acceso a todos los escenarios</li>
+                        <li>Zona de comidas y bebidas</li>
+                        <li>Zona de descanso</li>
+                    </ul>
                 </div>
-                <div class="entrada">
-                    <h2>Domingo</h2>
-                    <h3>27/8</h3>
-                    <div class="entradas-datos">
-                        <h4>¿Qué incluye?</h4>
-                        <ul>
-                            <li>Acceso a todos los escenarios</li>
-                            <li>Zona de comidas y bebidas</li>
-                            <li>Zona de descanso</li>
-                        </ul>
-                    </div>
-                    <button>Comprar entradas</button>
+                <button>Comprar entradas</button>
+            </div>
+
+            <div class="entrada domingo">
+                <h2>Domingo</h2>
+                <h3>27/8</h3>
+                <div class="entrada-datos">
+                    <h4>¿Qué incluye?</h4>
+                    <ul>
+                        <li>Acceso a todos los escenarios</li>
+                        <li>Zona de comidas y bebidas</li>
+                        <li>Zona de descanso</li>
+                    </ul>
                 </div>
-                <div class="entrada">
-                    <h2>Full Pass</h2>
-                    <h3>2 días</h3>
-                    <div class="entradas-datos">
-                        <h4>¿Qué incluye?</h4>
-                        <ul>
-                            <li>Acceso a todos los escenarios ambos días</li>
-                            <li>Zona de comidas y bebidas</li>
-                            <li>Zona de descanso</li>
-                            <li>Merchandising exclusivo</li>
-                        </ul>
-                    </div>
-                    <button>Comprar entradas</button>
+                <button>Comprar entradas</button>
+            </div>
+
+            <div class="entrada full-pass">
+                <h2>Full Pass</h2>
+                <h3>2 días</h3>
+                <div class="entrada-datos">
+                    <h4>¿Qué incluye?</h4>
+                    <ul>
+                        <li>Acceso a todos los escenarios ambos días</li>
+                        <li>Zona de comidas y bebidas</li>
+                        <li>Zona de descanso</li>
+                        <li>Merchandising exclusivo</li>
+                    </ul>
                 </div>
+                <button>Comprar entradas</button>
             </div>
         </section>
+
+        <!-- Carrusel en móvil -->
+        <div id="carrusel-entradas" class="carousel slide">
+            <div class="carousel-inner">
+            
+                <div class="carousel-item active">
+                    <div class="entrada sabado">
+                        <h2>Sábado</h2>
+                        <h3>26/8</h3>
+                        <div class="entrada-datos">
+                            <h4>¿Qué incluye?</h4>
+                            <ul>
+                                <li>Acceso a todos los escenarios</li>
+                                <li>Zona de comidas y bebidas</li>
+                                <li>Zona de descanso</li>
+                            </ul>
+                        </div>
+                        <button>Comprar entradas</button>
+                    </div>
+                </div>
+                        
+                <div class="carousel-item">
+                    <div class="entrada domingo">
+                        <h2>Domingo</h2>
+                        <h3>27/8</h3>
+                        <div class="entrada-datos">
+                            <h4>¿Qué incluye?</h4>
+                            <ul>
+                                <li>Acceso a todos los escenarios</li>
+                                <li>Zona de comidas y bebidas</li>
+                                <li>Zona de descanso</li>
+                            </ul>
+                        </div>
+                        <button>Comprar entradas</button>
+                    </div>
+                </div>
+                        
+                <div class="carousel-item">
+                    <div class="entrada full-pass">
+                        <h2>Full Pass</h2>
+                        <h3>2 días</h3>
+                        <div class="entrada-datos">
+                            <h4>¿Qué incluye?</h4>
+                            <ul>
+                                <li>Acceso a todos los escenarios ambos días</li>
+                                <li>Zona de comidas y bebidas</li>
+                                <li>Zona de descanso</li>
+                                <li>Merchandising exclusivo</li>
+                            </ul>
+                        </div>
+                        <button>Comprar entradas</button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carrusel-entradas" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carrusel-entradas" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div> 
+
         <div class="fondo-contenedor">
             <section class="preguntas-frecuentes">
                 <h2>Preguntas frecuentes</h2>
-                <div class="accordion accordion-flush preguntas-frecuentes" id="accordionExample">
+                <div class="accordion accordion-flush" id="accordionExample">
                     <div class="accordion-item">
                         <h3 class="accordion-header">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">¿Hay opciones de transporte y estacionamiento?</button>

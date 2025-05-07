@@ -315,7 +315,7 @@ $bp-tablet-end: $bp-tablet + 1px ;
         }
 
         .artistas-grid {
-            display: none !important;
+            display: none;
         }
     
         .carousel-inner {
@@ -350,7 +350,7 @@ $bp-tablet-end: $bp-tablet + 1px ;
 //Tablet
 @media (min-width: $bp-mobile-end) and (max-width: $bp-tablet) {
     .artistas-dia-container {
-        padding: 3rem 4rem;
+        padding: 4rem 4rem ;
         .artistas-destacados {
             display: grid;
             gap: 1rem;
@@ -368,27 +368,124 @@ $bp-tablet-end: $bp-tablet + 1px ;
 }
 
 // ENTRADAS
+//Móvil
 @media (max-width: $bp-mobile) {
     .entradas {
-        .entradas-container { 
-            flex-direction: column; 
-            gap: 2rem; 
+        .entradas-container {
+            display: none;
+        }
+
+        #carrusel-entradas {
+            display: block;
+            margin-bottom: 3rem;
+            padding: 0 1.5rem;
+            .carousel-inner {
+                .carousel-item {
+                    .entrada {
+                        flex: 1;
+                        background-color: $color-tarjetas;
+                        border-radius: 16px;
+                        color: $color-blanco;
+                        box-shadow: $sombra-baja;
+                        padding: 1.2rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        text-align: center;
+            
+                        h2 {
+                            margin-bottom: 0;
+                            font-weight: normal;
+                        }
+                    
+                        h3 {
+                            font-size: 5rem;
+                            margin-bottom: 1rem;
+                            font-weight: bold;
+                        }
+                    
+                        .entrada-datos{
+                            background-color: $color-fondo;
+                            color: $color-negro;
+                            padding: 1rem;
+                            border-radius: 8px;
+                            margin-bottom: 1.5rem;
+            
+                            h4 {
+                                text-align: left;
+                                margin-bottom: 0.2rem;
+                                font-size: 1.6rem;
+                            }
+                        
+                            ul {
+                                li {
+                                    text-align: left;
+                                    margin: 0.5rem 0;
+                                    font-size: 0.9rem;
+                                    list-style: none;
+                                }
+                            }
+                        }
+            
+                        button {
+                            margin-top: auto;
+                            width: 100%;
+                        }
+                    }
+
+                }
+            }
+            
         }
     
         .preguntas-frecuentes {
-            .accordion-header button { 
-                font-size: 1.5rem; 
-                padding: 24px 16px; 
+            .accordion-header{
+                button {
+                    font-size: 1.3rem !important; 
+                    padding: 1.2rem 1.5rem !important;
+                }
             }
-                
-            .accordion-body { 
-                font-size: 0.9rem; 
-                padding: 16px; 
+
+            .accordion-body {
+                font-size: 1rem !important;
+                padding: 1.2rem 1.5rem !important;
             }
         }
     }
 }
 
+// Tablet
+@media (min-width: $bp-mobile-end) and (max-width: $bp-tablet) {
+    .entradas {
+        #carrusel-entradas { 
+            display: none !important; 
+        }
+        
+        .entradas-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.2rem;
+      
+            .entrada:nth-child(3) {
+                grid-column: 1 / span 2;
+            }
+        }
+
+        .preguntas-frecuentes {
+            .accordion-header{
+                button {
+                    font-size: 1.5rem !important; 
+                    padding: 1.2rem 1.8rem !important;
+                }
+            }
+
+            .accordion-body {
+                font-size: 1rem !important;
+                padding: 1.2rem 1.8rem !important;
+            }
+        }
+    }
+}
 
 
 // CONTACTO
