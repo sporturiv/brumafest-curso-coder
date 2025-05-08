@@ -17,6 +17,10 @@ $bp-tablet-end: $bp-tablet + 1px ;
     h5 { font-size: 1.2rem; }
     h6 { font-size: 1.1rem; }
 
+    p  { font-size: 0.95rem; }
+}
+
+@media (min-width: $bp-mobile-end) and (max-width: $bp-tablet) {
     p  { font-size: 1rem; }
 }
 
