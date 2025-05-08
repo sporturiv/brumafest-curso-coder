@@ -365,94 +365,85 @@ footer .footer-container .footer-bottom a {
 
 .artistas .artistas-dia-container {
   margin: 0;
-  padding: 4rem 10rem;
-}
-.artistas .artistas-dia-container.domingo {
-  background-color: rgb(203, 199, 238);
+  padding: 6rem 10rem;
 }
 .artistas .artistas-dia-container.sabado {
   background-color: lavender;
 }
+.artistas .artistas-dia-container.domingo {
+  background-color: rgb(203, 199, 238);
+}
 .artistas .artistas-dia-container .artistas-destacados {
   display: flex;
   gap: 2rem;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 .artistas .artistas-dia-container .artistas-destacados .artista {
+  flex: 1 1 calc(33% - 2rem);
   background-color: darkslateblue;
-  border-radius: 10px;
-  padding: 1.5rem;
-  flex: 1 1 calc(33% - 1.5rem);
-  text-align: left;
   color: #ffffff;
-  text-shadow: #000000 1px 1px;
+  border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-.artistas .artistas-dia-container .artistas-destacados .artista p {
-  margin-bottom: 12px;
+  padding: 1.5rem;
+  text-align: left;
 }
 .artistas .artistas-dia-container .artistas-destacados .artista .imagen {
   width: 100%;
-  aspect-ratio: 1.5/1;
+  aspect-ratio: 3/2;
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 1rem;
 }
+.artistas .artistas-dia-container .artistas-destacados .artista h3 {
+  margin: 0 0 0.5rem;
+}
+.artistas .artistas-dia-container .artistas-destacados .artista p {
+  margin-bottom: 1rem;
+}
 .artistas .artistas-dia-container .artistas-destacados .artista .redes-iconos {
   display: flex;
-  flex-wrap: wrap;
   gap: 0.8rem;
 }
 .artistas .artistas-dia-container .artistas-destacados .artista .redes-iconos img {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
 }
 .artistas .artistas-dia-container .artistas-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  gap: 2rem;
   padding: 2rem 0;
-  justify-items: start;
 }
 .artistas .artistas-dia-container .artistas-grid .artista-mini {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
-  padding: 1rem;
-  border-radius: 8px;
-}
-.artistas .artistas-dia-container .artistas-grid .artista-mini .artista-mini-datos {
-  display: flex;
-  flex-direction: column;
-  text-align: start;
-  width: 100%;
-  gap: 8px;
-}
-.artistas .artistas-dia-container .artistas-grid .artista-mini .artista-mini-datos h4 {
-  font-family: "Inter", sans-serif;
-  font-size: 1.2rem;
 }
 .artistas .artistas-dia-container .artistas-grid .artista-mini img {
   width: 100%;
   max-width: 80px;
-  max-height: 80px;
-  aspect-ratio: 1/1;
+  max-height: 680px;
   object-fit: cover;
+  aspect-ratio: 1/1;
   border-radius: 6px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
-.artistas .artistas-dia-container .artistas-grid .artista-mini p {
-  font-weight: bold;
-  margin: 0.5rem 0;
+.artistas .artistas-dia-container .artistas-grid .artista-mini .artista-mini-datos h4 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: normal;
+  font-size: 2rem;
+  margin: 0;
 }
 .artistas .artistas-dia-container .artistas-grid .artista-mini .redes {
   display: flex;
   gap: 0.4rem;
 }
 .artistas .artistas-dia-container .artistas-grid .artista-mini .redes img {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
+}
+.artistas .artistas-dia-container #carousel-artistas-sabado, .artistas .artistas-dia-container #carousel-artistas-domingo {
+  display: none;
 }
 
 .entradas .entradas-container {
@@ -800,52 +791,86 @@ footer .footer-container .footer-bottom a {
   }
 }
 @media (max-width: 767px) {
-  .artistas-dia-container {
+  .artistas .artistas-dia-container {
     padding: 2.5rem 1.5rem;
-    flex-direction: column;
   }
-  .artistas-dia-container .artistas-destacados .artista {
+  .artistas .artistas-dia-container .artistas-destacados {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .artistas .artistas-dia-container .artistas-destacados .artista {
     flex: 1 1 100% !important;
   }
-  .artistas-dia-container .artistas-destacados .artista p {
+  .artistas .artistas-dia-container .artistas-destacados .artista p {
     font-size: 0.9rem;
   }
-  .artistas-dia-container .artistas-grid {
-    display: none;
-  }
-  .artistas-dia-container .carousel-inner .carousel-item .artista-mini {
-    display: flex !important;
-    align-items: flex-start !important;
-    gap: 1rem !important;
-  }
-  .artistas-dia-container .carousel-inner .carousel-item .artista-mini img {
-    width: 100%;
-    max-width: 70px;
-    max-height: 70px;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 0.5rem;
-  }
-  .artistas-dia-container .carousel-inner .carousel-item .artista-mini .redes img {
+  .artistas .artistas-dia-container .artistas-destacados .artista .redes-iconos img {
     width: 32px;
     height: 32px;
   }
+  .artistas .artistas-dia-container .artistas-grid {
+    display: none;
+  }
+  .artistas .artistas-dia-container #carousel-artistas-sabado, .artistas .artistas-dia-container #carousel-artistas-domingo {
+    display: block !important;
+  }
+  .artistas .artistas-dia-container #carousel-artistas-sabado .carousel-inner .carousel-item .artista-mini, .artistas .artistas-dia-container #carousel-artistas-domingo .carousel-inner .carousel-item .artista-mini {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .artistas .artistas-dia-container #carousel-artistas-sabado .carousel-inner .carousel-item .artista-mini img, .artistas .artistas-dia-container #carousel-artistas-domingo .carousel-inner .carousel-item .artista-mini img {
+    width: 100%;
+    max-width: 65px;
+    max-height: 65px;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    border-radius: 6px;
+    margin-bottom: 0;
+  }
+  .artistas .artistas-dia-container #carousel-artistas-sabado .carousel-inner .carousel-item .artista-mini .artista-mini-datos, .artistas .artistas-dia-container #carousel-artistas-domingo .carousel-inner .carousel-item .artista-mini .artista-mini-datos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .artistas .artistas-dia-container #carousel-artistas-sabado .carousel-inner .carousel-item .artista-mini .artista-mini-datos .redes, .artistas .artistas-dia-container #carousel-artistas-domingo .carousel-inner .carousel-item .artista-mini .artista-mini-datos .redes {
+    display: flex;
+    gap: 0.4rem;
+  }
+  .artistas .artistas-dia-container #carousel-artistas-sabado .carousel-inner .carousel-item .artista-mini .artista-mini-datos .redes img, .artistas .artistas-dia-container #carousel-artistas-domingo .carousel-inner .carousel-item .artista-mini .artista-mini-datos .redes img {
+    width: 24px;
+    height: 24px;
+  }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .artistas-dia-container {
+  .artistas .artistas-dia-container {
     padding: 4rem 4rem;
   }
-  .artistas-dia-container .artistas-destacados {
+  .artistas .artistas-dia-container .artistas-destacados {
     display: grid;
-    gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
-  .artistas-dia-container .artistas-destacados .artista:nth-child(1) {
+  .artistas .artistas-dia-container .artistas-destacados .artista:nth-child(1) {
     grid-column: 1/-1;
   }
-  .artistas-dia-container .artistas-grid {
+  .artistas .artistas-dia-container .artistas-grid {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .artistas .artistas-dia-container .artistas-grid .artista-mini .artista-mini-datos h4 {
+    font-size: 1.8rem;
+  }
+  .artistas .artistas-dia-container .artistas-grid .artista-mini img {
+    max-width: 70px;
+    max-height: 70px;
+  }
+  .artistas .artistas-dia-container #carousel-artistas-sabado, .artistas .artistas-dia-container #carousel-artistas-domingo {
+    display: none !important;
   }
 }
 @media (max-width: 767px) {

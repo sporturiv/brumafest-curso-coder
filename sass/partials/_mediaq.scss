@@ -302,46 +302,69 @@ $bp-tablet-end: $bp-tablet + 1px ;
 // ARTISTAS
 // Móvil
 @media (max-width: $bp-mobile) {
-    .artistas-dia-container {
-        padding: 2.5rem 1.5rem;
-        flex-direction: column;
-        .artistas-destacados{
-            .artista {
-                flex: 1 1 100% !important;
-                p {
-                    font-size: 0.9rem;
-                }
-            }
-        }
-
-        .artistas-grid {
-            display: none;
-        }
-    
-        .carousel-inner {
-            .carousel-item {
-                .artista-mini {
-                  display: flex !important;
-                  align-items: flex-start !important;
-                  gap: 1rem !important;
-
-                    img {
-                        width: 100%;
-                        max-width: 70px;
-                        max-height: 70px;
-                        aspect-ratio: 1 / 1;
-                        object-fit: cover;
-                        border-radius: 6px;
-                        margin-bottom: 0.5rem;
+    .artistas {
+        .artistas-dia-container {
+            padding: 2.5rem 1.5rem;
+            .artistas-destacados{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                .artista {
+                    flex: 1 1 100% !important;
+                    p {
+                        font-size: 0.9rem;
                     }
 
-                    .redes {
-                        img {
-                            width: 32px;
-                            height: 32px;
+                    .redes-iconos {
+                        img { 
+                            width:32px; 
+                            height:32px; 
                         }
                     }
                 }
+            }
+    
+            .artistas-grid {
+                display: none;
+            }
+    
+            #carousel-artistas-sabado, #carousel-artistas-domingo {
+                display: block !important;
+
+                .carousel-inner {
+                    .carousel-item {
+                        .artista-mini {
+                            display: flex ;
+                            flex-direction: row ;
+                            align-items: center ;
+                            gap: 1rem ;
+                            margin-bottom: 0.5rem ;
+        
+                                img {
+                                    width: 100%;
+                                    max-width: 65px ;
+                                    max-height: 65px ;
+                                    object-fit: cover ;
+                                    aspect-ratio: 1 / 1;
+                                    border-radius: 6px ;
+                                    margin-bottom: 0 ;
+                                }
+                                .artista-mini-datos {
+                                    display: flex ;
+                                    flex-direction: column ;
+                                    justify-content: center ;
+                                    .redes {
+                                        display: flex;
+                                        gap: 0.4rem;
+                                        img {
+                                            width: 24px;
+                                            height: 24px;
+                                        }
+                                    }
+                                }
+                        }
+                    }
+                }    
             }
         }
     }
@@ -349,20 +372,41 @@ $bp-tablet-end: $bp-tablet + 1px ;
 
 //Tablet
 @media (min-width: $bp-mobile-end) and (max-width: $bp-tablet) {
-    .artistas-dia-container {
-        padding: 4rem 4rem ;
-        .artistas-destacados {
-            display: grid;
-            gap: 1rem;
-            grid-template-columns: repeat(2, 1fr);
-
-            .artista:nth-child(1) {
-                grid-column: 1 / -1;
+    .artistas {
+        .artistas-dia-container {
+            padding: 4rem 4rem ;
+            .artistas-destacados {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                
+                .artista:nth-child(1) {
+                  grid-column: 1 / -1;
+                }
             }
-        }
+    
+            .artistas-grid{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
 
-        .artistas-grid{
-            grid-template-columns: repeat(2, 1fr);
+                .artista-mini {
+                    .artista-mini-datos {
+                        h4 { 
+                            font-size: 1.8rem;
+                        }
+                    }
+
+                    img {
+                        max-width: 70px ;
+                        max-height: 70px ;
+                    }
+                }
+            }
+    
+            #carousel-artistas-sabado, #carousel-artistas-domingo {
+                display: none !important;
+            }
         }
     }
 }
