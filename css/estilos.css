@@ -188,7 +188,7 @@ footer .footer-container .footer-bottom a {
   color: #ffffff;
 }
 
-.destacado {
+.index .destacado {
   background-image: url("../medios/fotos/banner-principal.jpg");
   height: 60vh;
   background-size: cover;
@@ -201,25 +201,21 @@ footer .footer-container .footer-bottom a {
   flex-direction: column;
   text-shadow: #000000 3px 3px;
 }
-.destacado h1 {
+.index .destacado h1 {
   font-size: 6rem;
 }
-.destacado button {
+.index .destacado button {
   background-color: rgb(217, 15, 123);
   color: #ffffff;
 }
-
-.fondo-contenedor .fechas h2 {
-  font-family: "Bebas Neue", sans-serif;
-}
-.fondo-contenedor .fechas .fechas-container {
+.index .fondo-contenedor .fechas .fechas-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 4rem;
   margin: 0 1rem;
 }
-.fondo-contenedor .fechas .fechas-container .fecha {
+.index .fondo-contenedor .fechas .fechas-container .fecha {
   background-color: darkslateblue;
   border-radius: 8px;
   color: #ffffff;
@@ -229,72 +225,58 @@ footer .footer-container .footer-bottom a {
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-.fondo-contenedor .fechas .fechas-container .fecha:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-}
-.fondo-contenedor .fechas .fechas-container .fecha h3 {
+.index .fondo-contenedor .fechas .fechas-container .fecha h3 {
   font-size: 3rem;
 }
-.fondo-contenedor .fechas .fechas-container .fecha h4 {
+.index .fondo-contenedor .fechas .fechas-container .fecha h4 {
   font-size: 8rem;
-  font-weight: lighter;
 }
-.fondo-contenedor .fechas .fechas-container .fecha button {
+.index .fondo-contenedor .fechas .fechas-container .fecha button {
   width: 50%;
 }
-.fondo-contenedor .mapa-container h2 {
-  font-family: "Bebas Neue", sans-serif;
-}
-.fondo-contenedor .mapa-container .mapa {
+.index .fondo-contenedor .mapa-container .mapa {
   width: 100%;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-
-.galeria h2 {
-  font-family: "Bebas Neue", sans-serif;
-}
-.galeria p {
-  font-family: "Inter", sans-serif;
-}
-.galeria .galeria-grid {
+.index .galeria .galeria-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 320px);
   gap: 1rem;
   margin: 2.5rem 0;
 }
-.galeria .galeria-grid img {
+.index .galeria .galeria-grid img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
 }
-.galeria .galeria-grid .foto1 {
+.index .galeria .galeria-grid .foto1 {
   grid-column: 1/2;
   grid-row: 1/3;
 }
-.galeria .galeria-grid .foto2 {
+.index .galeria .galeria-grid .foto2 {
   grid-column: 2/3;
   grid-row: 1/2;
 }
-.galeria .galeria-grid .foto3 {
+.index .galeria .galeria-grid .foto3 {
   grid-column: 3/4;
   grid-row: 1/2;
 }
-.galeria .galeria-grid .foto4 {
+.index .galeria .galeria-grid .foto4 {
   grid-column: 4/5;
   grid-row: 1/2;
 }
-.galeria .galeria-grid .foto5 {
+.index .galeria .galeria-grid .foto5 {
   grid-column: 2/4;
   grid-row: 2/3;
 }
-.galeria .galeria-grid .foto6 {
+.index .galeria .galeria-grid .foto6 {
   grid-column: 4/5;
   grid-row: 2/3;
 }
-.galeria .ver-mas {
+.index .galeria .ver-mas {
   margin-top: 1rem;
   font-weight: bold;
   color: #640D5F;
@@ -482,12 +464,12 @@ footer .footer-container .footer-bottom a {
 .entradas .entradas-container .entrada .entrada-datos h4 {
   text-align: left;
   margin-bottom: 0.2rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 .entradas .entradas-container .entrada .entrada-datos ul li {
   text-align: left;
   margin: 0.5rem 0;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 .entradas .entradas-container .entrada button {
   margin-top: auto;
@@ -640,28 +622,31 @@ footer .footer-container .footer-bottom a {
   }
   .index .destacado button {
     font-size: 1rem;
-    width: 80%;
-    max-width: 300px;
+    width: 100%;
     margin-top: 1rem;
   }
-  .index .fechas .fechas-container {
+  .index .fondo-contenedor .fechas .fechas-container {
     flex-direction: column;
     gap: 2rem;
     margin: 0;
   }
-  .index .fechas .fechas-container .fecha {
+  .index .fondo-contenedor .fechas .fechas-container .fecha {
     width: 100%;
     padding: 1.5rem;
   }
-  .index .fechas .fechas-container .fecha h3 {
+  .index .fondo-contenedor .fechas .fechas-container .fecha h3 {
     font-size: 2rem;
   }
-  .index .fechas .fechas-container .fecha h4 {
+  .index .fondo-contenedor .fechas .fechas-container .fecha h4 {
     font-size: 4rem;
   }
-  .index .fechas .fechas-container .fecha button {
+  .index .fondo-contenedor .fechas .fechas-container .fecha button {
     width: 100%;
     font-size: 1rem;
+    padding: 8px;
+  }
+  .index .fondo-contenedor .mapa-container .mapa {
+    height: 300px;
   }
   .index .galeria .galeria-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -698,12 +683,15 @@ footer .footer-container .footer-bottom a {
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .index .fechas .fechas-container {
+  .index .fondo-contenedor .fechas .fechas-container {
     gap: 1rem;
     margin: 0;
   }
-  .index .fechas button {
+  .index .fondo-contenedor .fechas .fechas-container .fecha button {
     width: 100%;
+  }
+  .index .fondo-contenedor .mapa-container .mapa {
+    height: 300px;
   }
 }
 @media (max-width: 767px) {
@@ -915,11 +903,13 @@ footer .footer-container .footer-bottom a {
     margin-bottom: 0.2rem;
     font-size: 1.6rem;
   }
+  .entradas #carrusel-entradas .carousel-inner .carousel-item .entrada .entrada-datos ul {
+    padding-left: 1rem;
+  }
   .entradas #carrusel-entradas .carousel-inner .carousel-item .entrada .entrada-datos ul li {
     text-align: left;
     margin: 0.5rem 0;
     font-size: 0.9rem;
-    list-style: none;
   }
   .entradas #carrusel-entradas .carousel-inner .carousel-item .entrada button {
     margin-top: auto;

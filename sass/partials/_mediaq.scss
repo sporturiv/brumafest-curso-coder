@@ -92,33 +92,41 @@ $bp-tablet-end: $bp-tablet + 1px ;
     
             button {
                 font-size: 1rem;
-                width: 80%;
-                max-width: 300px;
+                width: 100%;
                 margin-top: 1rem;
             }
         }
+        
+        .fondo-contenedor {
+            .fechas {
+                .fechas-container {
+                    flex-direction: column;
+                    gap: 2rem;
+                    margin: 0;
+                    .fecha {
+                        width: 100%;
+                        padding: 1.5rem;
+                            
+                        h3 { 
+                            font-size: 2rem; 
+                        }
             
-        .fechas {
-            .fechas-container {
-                flex-direction: column;
-                gap: 2rem;
-                margin: 0;
-    
-                .fecha {
-                    width: 100%;
-                    padding: 1.5rem;
-                        
-                    h3 { 
-                        font-size: 2rem; 
+                        h4 { 
+                            font-size: 4rem; 
+                        }
+            
+                        button { 
+                            width: 100%; 
+                            font-size: 1rem;
+                            padding: 8px; 
+                        }
                     }
-        
-                    h4 { 
-                        font-size: 4rem; 
-                    }
-        
-                    button { 
-                        width: 100%; font-size: 1rem; 
-                    }
+                }
+            }
+
+            .mapa-container {
+                .mapa {
+                    height: 300px;
                 }
             }
         }
@@ -165,20 +173,28 @@ $bp-tablet-end: $bp-tablet + 1px ;
                 font-size: 1rem;
             }
         }
-
     }
 }
 
 @media (min-width: $bp-mobile-end) and (max-width: $bp-tablet) {
     .index {
-        .fechas {
-            .fechas-container { 
-                gap: 1rem; 
-                margin: 0; 
+        .fondo-contenedor {
+            .fechas {
+                .fechas-container { 
+                    gap: 1rem; 
+                    margin: 0;
+                    .fecha {
+                        button { 
+                            width: 100%;
+                        }
+                    }
+                }
             }
-    
-            button { 
-                width: 100%; 
+
+            .mapa-container {
+                .mapa {
+                    height: 300px;
+                }
             }
         }
     }
@@ -462,11 +478,11 @@ $bp-tablet-end: $bp-tablet + 1px ;
                             }
                         
                             ul {
+                                padding-left: 1rem;
                                 li {
                                     text-align: left;
                                     margin: 0.5rem 0;
                                     font-size: 0.9rem;
-                                    list-style: none;
                                 }
                             }
                         }
