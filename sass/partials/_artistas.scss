@@ -18,17 +18,16 @@
 
     // Artistas principales
     .artistas-destacados {
-        display: flex;
+        @include flex-container(row, flex-start, stretch);
         gap: 2rem;
+        flex-wrap: wrap;
         margin-bottom: 1.5rem;
 
         .artista {
+            @include cards();
+            @include flex-container(column, space-between, none);
             flex: 1 1 calc(33% - 2rem);
-            background-color: $color-tarjetas;
             color: $color-blanco;
-            border-radius: 10px;
-            box-shadow: $sombra-baja;
-            padding: 1.5rem;
             text-align: left;
 
             .imagen {
@@ -45,6 +44,7 @@
 
             p  { 
                 margin-bottom: 1rem; 
+                font-size: 0.9rem;
             }
 
             .redes-iconos {
@@ -67,8 +67,7 @@
         padding: 2rem 0;
 
         .artista-mini {
-            display: flex;
-            align-items: center;
+            @include flex-container(row, flex-start, center);
             gap: 1rem;
 
             img {

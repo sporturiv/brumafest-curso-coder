@@ -58,3 +58,19 @@ section {
   box-sizing: border-box;
   padding: 1.5rem 0;
 }
+
+// mixins
+@mixin cards ( $background-color: $color-tarjetas, $padding: 1.5rem, $radio: 10px, $sombra: $sombra-baja ) {
+  background-color: $background-color;
+  padding: $padding;
+  border-radius: $radio;
+  box-shadow: $sombra
+}
+
+@mixin flex-container( $direction: row, $justify: flex-start, $align: stretch ) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+

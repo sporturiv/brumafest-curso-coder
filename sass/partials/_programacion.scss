@@ -35,10 +35,8 @@
             gap: 1.5rem;
                 
             .escenario {
-                background-color: $color-tarjetas;
+                @include cards($color-tarjetas, 1rem, 8px);
                 color: $color-blanco;
-                padding: 1.2rem;
-                border-radius: 16px;
                 padding-bottom: 0.4rem;
             
                 h4 {

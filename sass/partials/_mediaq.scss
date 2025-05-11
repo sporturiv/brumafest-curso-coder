@@ -399,9 +399,14 @@ $bp-tablet-end: $bp-tablet + 1px ;
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 1rem;
-                
-                .artista:nth-child(1) {
-                  grid-column: 1 / -1;
+
+                .artista{
+                    &:nth-child(1) {
+                        grid-column: 1 / -1;
+                        .imagen {
+                            max-height: 300px;
+                        }
+                    }
                 }
             }
     

@@ -308,9 +308,10 @@ footer .footer-container .footer-bottom a {
 }
 .programacion .programacion-dia-container .escenario-container .escenario {
   background-color: darkslateblue;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   color: #ffffff;
-  padding: 1.2rem;
-  border-radius: 16px;
   padding-bottom: 0.4rem;
 }
 .programacion .programacion-dia-container .escenario-container .escenario h4 {
@@ -357,16 +358,24 @@ footer .footer-container .footer-bottom a {
 }
 .artistas .artistas-dia-container .artistas-destacados {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
   gap: 2rem;
+  flex-wrap: wrap;
   margin-bottom: 1.5rem;
 }
 .artistas .artistas-dia-container .artistas-destacados .artista {
-  flex: 1 1 calc(33% - 2rem);
   background-color: darkslateblue;
-  color: #ffffff;
+  padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: none;
+  flex: 1 1 calc(33% - 2rem);
+  color: #ffffff;
   text-align: left;
 }
 .artistas .artistas-dia-container .artistas-destacados .artista .imagen {
@@ -381,6 +390,7 @@ footer .footer-container .footer-bottom a {
 }
 .artistas .artistas-dia-container .artistas-destacados .artista p {
   margin-bottom: 1rem;
+  font-size: 0.9rem;
 }
 .artistas .artistas-dia-container .artistas-destacados .artista .redes-iconos {
   display: flex;
@@ -399,6 +409,8 @@ footer .footer-container .footer-bottom a {
 }
 .artistas .artistas-dia-container .artistas-grid .artista-mini {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
   gap: 1rem;
 }
@@ -431,19 +443,22 @@ footer .footer-container .footer-bottom a {
 
 .entradas .entradas-container {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: stretch;
   gap: 2rem;
 }
 .entradas .entradas-container .entrada {
-  flex: 1;
   background-color: darkslateblue;
-  border-radius: 10px;
-  color: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: none;
+  flex: 1;
+  color: #ffffff;
   text-align: center;
 }
 .entradas .entradas-container .entrada h2 {
@@ -507,9 +522,10 @@ footer .footer-container .footer-bottom a {
   margin-bottom: 6rem;
 }
 .contacto .formulario {
-  border-radius: 10px;
   background-color: darkslateblue;
   padding: 2rem;
+  border-radius: 10px;
+  box-shadow: none;
   margin: 2rem 0;
   max-width: 50vw;
   margin-left: auto;
@@ -850,6 +866,9 @@ footer .footer-container .footer-bottom a {
   }
   .artistas .artistas-dia-container .artistas-destacados .artista:nth-child(1) {
     grid-column: 1/-1;
+  }
+  .artistas .artistas-dia-container .artistas-destacados .artista:nth-child(1) .imagen {
+    max-height: 300px;
   }
   .artistas .artistas-dia-container .artistas-grid {
     display: grid;

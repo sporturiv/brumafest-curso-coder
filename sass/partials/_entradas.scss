@@ -5,20 +5,14 @@
 //ENTRADAS
 .entradas {
     .entradas-container {
-        display: flex;
-        justify-content: space-between;
+        @include flex-container(row, space-between, stretch);
         gap: 2rem;
         
         .entrada {
+            @include cards($color-tarjetas, 2rem);
+            @include flex-container(column, space-between, none);
             flex: 1;
-            background-color: $color-tarjetas;
-            border-radius: 10px;
             color: $color-blanco;
-            box-shadow: $sombra-baja;
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
             text-align: center;
 
             h2 {
