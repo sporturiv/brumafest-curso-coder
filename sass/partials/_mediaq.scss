@@ -1,6 +1,7 @@
-//Variables y estilos generales
+// Variables, estilos y animaciones
 @use "variables" as *;
 @use "base" as *;
+@use "animaciones" as *;
 
 // BREAKPOINTS MQ
 $bp-mobile: 767px ;

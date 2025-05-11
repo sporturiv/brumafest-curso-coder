@@ -1,6 +1,7 @@
-//Variables y estilos generales
+// Variables, estilos y animaciones
 @use "variables" as *;
 @use "base" as *;
+@use "animaciones" as *;
 
 //PROGRAMACIÓN
 .programacion {
@@ -35,6 +36,8 @@
             gap: 1.5rem;
                 
             .escenario {
+                @include fade-in-up();
+                @include lift-on-hover(); 
                 @include cards($color-tarjetas, 1rem, 8px);
                 color: $color-blanco;
                 padding-bottom: 0.4rem;

@@ -49,6 +49,11 @@ button {
   border-radius: 8px;
   padding: 12px 24px;
   font-size: 1rem;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+button:hover {
+  box-shadow: 0 0 15px #ffb300, 0 0 30px rgb(255, 209.4, 102);
 }
 
 body {
@@ -70,6 +75,35 @@ section {
   padding: 1.5rem 0;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes liftUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 header .navbar {
   background-color: #640D5F;
 }
@@ -151,6 +185,7 @@ footer .footer-container .footer-columns .footer-column.redes .redes-iconos {
 footer .footer-container .footer-columns .footer-column.redes .redes-iconos img {
   width: 32px;
   height: 32px;
+  animation: pulse 2s infinite;
 }
 footer .footer-container .footer-columns .footer-column.newsletter form .suscribirme {
   display: flex;
@@ -307,12 +342,18 @@ footer .footer-container .footer-bottom a {
   gap: 1.5rem;
 }
 .programacion .programacion-dia-container .escenario-container .escenario {
+  animation: fadeInUp 0.6s ease-out both;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
   background-color: darkslateblue;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   color: #ffffff;
   padding-bottom: 0.4rem;
+}
+.programacion .programacion-dia-container .escenario-container .escenario:hover {
+  animation: liftUp 0.3s forwards;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 .programacion .programacion-dia-container .escenario-container .escenario h4 {
   margin-bottom: 24px;
@@ -366,6 +407,8 @@ footer .footer-container .footer-bottom a {
   margin-bottom: 1.5rem;
 }
 .artistas .artistas-dia-container .artistas-destacados .artista {
+  animation: fadeInUp 0.6s ease-out both;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
   background-color: darkslateblue;
   padding: 1.5rem;
   border-radius: 10px;
@@ -377,6 +420,10 @@ footer .footer-container .footer-bottom a {
   flex: 1 1 calc(33% - 2rem);
   color: #ffffff;
   text-align: left;
+}
+.artistas .artistas-dia-container .artistas-destacados .artista:hover {
+  animation: liftUp 0.3s forwards;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 .artistas .artistas-dia-container .artistas-destacados .artista .imagen {
   width: 100%;
@@ -449,6 +496,8 @@ footer .footer-container .footer-bottom a {
   gap: 2rem;
 }
 .entradas .entradas-container .entrada {
+  animation: fadeInUp 0.6s ease-out both;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
   background-color: darkslateblue;
   padding: 2rem;
   border-radius: 10px;
@@ -460,6 +509,10 @@ footer .footer-container .footer-bottom a {
   flex: 1;
   color: #ffffff;
   text-align: center;
+}
+.entradas .entradas-container .entrada:hover {
+  animation: liftUp 0.3s forwards;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 .entradas .entradas-container .entrada h2 {
   margin-bottom: 0;
@@ -522,6 +575,8 @@ footer .footer-container .footer-bottom a {
   margin-bottom: 6rem;
 }
 .contacto .formulario {
+  animation: fadeInUp 0.6s ease-out both;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
   background-color: darkslateblue;
   padding: 2rem;
   border-radius: 10px;
@@ -530,6 +585,10 @@ footer .footer-container .footer-bottom a {
   max-width: 50vw;
   margin-left: auto;
   margin-right: auto;
+}
+.contacto .formulario:hover {
+  animation: liftUp 0.3s forwards;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 .contacto .formulario form {
   display: flex;

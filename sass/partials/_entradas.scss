@@ -1,6 +1,7 @@
-//Variables y estilos generales
+// Variables, estilos y animaciones
 @use "variables" as *;
 @use "base" as *;
+@use "animaciones" as *;
 
 //ENTRADAS
 .entradas {
@@ -9,6 +10,8 @@
         gap: 2rem;
         
         .entrada {
+            @include fade-in-up();
+            @include lift-on-hover(); 
             @include cards($color-tarjetas, 2rem);
             @include flex-container(column, space-between, none);
             flex: 1;

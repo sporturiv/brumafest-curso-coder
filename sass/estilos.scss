@@ -1,16 +1,19 @@
-//Variables y estilos generales
+// Variables y estilos generales
 @use "partials/variables" ;
 @use "partials/base" ;
 
-//Header y footer
+// Animaciones
+@use "partials/animaciones" ;
+
+// Header y footer
 @use "partials/header-y-footer" ;
 
-//Páginas
+// Páginas
 @use "partials/index" ;
 @use "partials/programacion" ;
 @use "partials/artistas" ;
 @use "partials/entradas" ;
 @use "partials/contacto" ;
 
-//MediaQ
+// MediaQ
 @use "partials/mediaq" ;

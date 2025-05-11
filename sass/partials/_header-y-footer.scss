@@ -1,6 +1,7 @@
-//Variables y estilos generales
+// Variables, estilos y animaciones
 @use "variables" as *;
 @use "base" as *;
+@use "animaciones" as *;
 
 // HEADER
 // HEADER
@@ -102,6 +103,7 @@ footer {
                         img {
                             width: 32px;
                             height: 32px;
+                            animation: pulse 2s infinite;
                         }
                     }
                 }

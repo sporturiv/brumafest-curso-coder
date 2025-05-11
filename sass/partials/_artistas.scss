@@ -1,6 +1,7 @@
-// Variables y estilos generales
+// Variables, estilos y animaciones
 @use "variables" as *;
 @use "base" as *;
+@use "animaciones" as *;
 
 // ARTISTAS
 .artistas {
@@ -24,6 +25,8 @@
         margin-bottom: 1.5rem;
 
         .artista {
+            @include fade-in-up();
+            @include lift-on-hover(); 
             @include cards();
             @include flex-container(column, space-between, none);
             flex: 1 1 calc(33% - 2rem);
@@ -51,9 +54,9 @@
                 display: flex;
                 gap: 0.8rem;
                 margin-top: auto;
-                img { 
+                img {
                     width:40px; 
-                    height:40px; 
+                    height:40px;
                 }
             }
         }
@@ -94,7 +97,7 @@
                 gap: 0.4rem;
                 img { 
                     width:28px; 
-                    height:28px; 
+                    height:28px;
                 }
             }
         }

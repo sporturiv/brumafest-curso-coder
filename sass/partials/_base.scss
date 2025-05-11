@@ -1,5 +1,6 @@
 //Variables y estilos generales
 @use "variables" as *;
+@use "sass:color";
 
 //Reset
 * {
@@ -37,6 +38,12 @@ button {
   border-radius: 8px;
   padding: 12px 24px;
   font-size: 1rem;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 0 15px $color-secundario, 0 0 30px color.adjust($color-secundario, $lightness: 20%);
+  }
 }
 
 //Body y secciones
@@ -59,7 +66,7 @@ section {
   padding: 1.5rem 0;
 }
 
-// mixins
+// Mixins
 @mixin cards ( $background-color: $color-tarjetas, $padding: 1.5rem, $radio: 10px, $sombra: $sombra-baja ) {
   background-color: $background-color;
   padding: $padding;

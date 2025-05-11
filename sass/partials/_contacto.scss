@@ -1,12 +1,15 @@
-//Variables y estilos generales
+// Variables, estilos y animaciones
 @use "variables" as *;
 @use "base" as *;
+@use "animaciones" as *;
 
 //CONTACTO
 .contacto {
     margin-bottom: 6rem;
   
     .formulario {
+        @include fade-in-up();
+        @include lift-on-hover();
         @include cards($color-tarjetas, 2rem, 10px, none);
         margin: 2rem 0;
         max-width: 50vw;
