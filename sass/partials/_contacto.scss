@@ -9,7 +9,6 @@
   
     .formulario {
         @include fade-in-up();
-        @include lift-on-hover();
         @include cards($color-tarjetas, 2rem, 10px, none);
         margin: 2rem 0;
         max-width: 50vw;

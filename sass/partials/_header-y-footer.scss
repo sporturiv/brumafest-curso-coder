@@ -38,6 +38,11 @@ header {
                         font-family: $tipografia-titulos;
                         font-size: 1.5rem;
                         color: $color-blanco;
+                        transition: color 0.3s ease;
+
+                        &:hover, &:focus {
+                            color: $color-secundario;
+                        }
                     }
                 }
             }
@@ -86,6 +91,11 @@ footer {
                         a {
                             color: $color-blanco;
                             text-decoration: none;
+                            transition: color 0.3s ease;
+
+                            &:hover, &:focus {
+                                color: $color-secundario;
+                            }
                         }
                     }
                 }
@@ -103,7 +113,6 @@ footer {
                         img {
                             width: 32px;
                             height: 32px;
-                            animation: pulse 2s infinite;
                         }
                     }
                 }
@@ -151,6 +160,11 @@ footer {
             a {
                 font-size: 0.8rem;
                 color: $color-blanco;
+                transition: color 0.3s ease;
+
+                &:hover, &:focus {
+                    color: $color-secundario;
+                }
             }
         }
     }

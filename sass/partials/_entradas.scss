@@ -6,17 +6,23 @@
 //ENTRADAS
 .entradas {
     .entradas-container {
+        @include fade-in-up();
         @include flex-container(row, space-between, stretch);
         gap: 2rem;
+
         
         .entrada {
-            @include fade-in-up();
-            @include lift-on-hover(); 
             @include cards($color-tarjetas, 2rem);
             @include flex-container(column, space-between, none);
             flex: 1;
             color: $color-blanco;
             text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            }
 
             h2 {
                 margin-bottom: 0;

@@ -5,6 +5,7 @@
 
 //PROGRAMACIÓN
 .programacion {
+    @include fade-in-up();
     .banner {
         img {
             width: 100%;
@@ -36,11 +37,15 @@
             gap: 1.5rem;
                 
             .escenario {
-                @include fade-in-up();
-                @include lift-on-hover(); 
                 @include cards($color-tarjetas, 1rem, 8px);
                 color: $color-blanco;
                 padding-bottom: 0.4rem;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                }
             
                 h4 {
                     margin-bottom: 24px;

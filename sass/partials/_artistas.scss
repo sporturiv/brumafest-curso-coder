@@ -23,15 +23,20 @@
         gap: 2rem;
         flex-wrap: wrap;
         margin-bottom: 1.5rem;
+        @include fade-in-up();
 
         .artista {
-            @include fade-in-up();
-            @include lift-on-hover(); 
             @include cards();
             @include flex-container(column, space-between, none);
             flex: 1 1 calc(33% - 2rem);
             color: $color-blanco;
             text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            }
 
             .imagen {
                 width: 100%;
@@ -72,6 +77,12 @@
         .artista-mini {
             @include flex-container(row, flex-start, center);
             gap: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            }
 
             img {
                 width: 100%;
