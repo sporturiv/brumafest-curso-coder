@@ -31,9 +31,9 @@ input {
 }
 
 button {
-  background-color: $color-secundario;
+  background-color: $color-rosa;
   font-weight: bold;
-  color: $color-negro;
+  color: $color-blanco;
   border: none;
   border-radius: 8px;
   padding: 0.75rem 1.5rem;
@@ -70,8 +70,8 @@ section {
 }
 
 // Mixins
-@mixin cards ( $background-color: $color-tarjetas, $padding: 1.5rem, $radio: 10px, $sombra: $sombra-baja ) {
-  background-color: $background-color;
+@mixin cards ( $background: $color-tarjetas, $padding: 1.5rem, $radio: 10px, $sombra: $sombra-baja ) {
+  background: $background;
   padding: $padding;
   border-radius: $radio;
   box-shadow: $sombra

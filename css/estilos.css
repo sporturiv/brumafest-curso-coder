@@ -42,9 +42,9 @@ input {
 }
 
 button {
-  background-color: #ffb300;
+  background-color: rgb(217, 15, 123);
   font-weight: bold;
-  color: #000000;
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   padding: 0.75rem 1.5rem;
@@ -235,10 +235,6 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
 .index .destacado h1 {
   font-size: 6rem;
 }
-.index .destacado button {
-  background-color: rgb(217, 15, 123);
-  color: #ffffff;
-}
 .index .fondo-contenedor .fechas .fechas-container {
   display: flex;
   flex-direction: row;
@@ -247,7 +243,7 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
   margin: 0 1rem;
 }
 .index .fondo-contenedor .fechas .fechas-container .fecha {
-  background-color: darkslateblue;
+  background-color: linear-gradient(to top, #640D5F, #ffc234);
   border-radius: 8px;
   color: #ffffff;
   text-shadow: #000000 1px 1px;
@@ -351,7 +347,7 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
   gap: 1.5rem;
 }
 .programacion .programacion-dia-container .escenario-container .escenario {
-  background-color: darkslateblue;
+  background: linear-gradient(to top, #640D5F, #ffc234);
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -417,7 +413,7 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
   animation: fadeInUp 0.6s ease-out both;
 }
 .artistas .artistas-dia-container .artistas-destacados .artista {
-  background-color: darkslateblue;
+  background: linear-gradient(to top, #640D5F, #ffc234);
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -427,12 +423,17 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
   align-items: none;
   flex: 1 1 calc(33% - 2rem);
   color: #ffffff;
+  text-shadow: #000000 3px 3px;
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .artistas .artistas-dia-container .artistas-destacados .artista:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+.artistas .artistas-dia-container .artistas-destacados .artista:focus-within {
+  outline: 3px solid #ffb300;
+  outline-offset: 3px;
 }
 .artistas .artistas-dia-container .artistas-destacados .artista .imagen {
   width: 100%;
@@ -446,7 +447,8 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
 }
 .artistas .artistas-dia-container .artistas-destacados .artista p {
   margin-bottom: 1rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  text-shadow: none;
 }
 .artistas .artistas-dia-container .artistas-destacados .artista .redes-iconos {
   display: flex;
@@ -511,7 +513,7 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
   gap: 2rem;
 }
 .entradas .entradas-container .entrada {
-  background-color: darkslateblue;
+  background: linear-gradient(to top, #640D5F, #ffc234);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -521,14 +523,17 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
   align-items: none;
   flex: 1;
   color: #ffffff;
+  text-shadow: #000000 3px 3px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.entradas .entradas-container .entrada:hover, .entradas .entradas-container .entrada:focus-within {
-  transform: translateY(-5px);
-  outline: 2px solid #ffb300;
-  outline-offset: 4px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2), 0 0 15px #919191;
+.entradas .entradas-container .entrada:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+.entradas .entradas-container .entrada:focus-within {
+  outline: 3px solid #ffb300;
+  outline-offset: 3px;
 }
 .entradas .entradas-container .entrada h2 {
   margin-bottom: 0;
@@ -542,6 +547,7 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
 .entradas .entradas-container .entrada .entrada-datos {
   background-color: #f3f4f8;
   color: #000000;
+  text-shadow: none;
   padding: 1rem;
   border-radius: 8px;
   margin-bottom: 1.5rem;
@@ -559,6 +565,8 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
 .entradas .entradas-container .entrada button {
   margin-top: auto;
   width: 100%;
+  background-color: #ffb300;
+  color: #000000;
 }
 .entradas #carrusel-entradas {
   display: none;
@@ -591,7 +599,7 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
   margin-bottom: 6rem;
 }
 .contacto .formulario {
-  background-color: darkslateblue;
+  background: linear-gradient(to top, #640D5F, #ffc234);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: none;
@@ -792,7 +800,7 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
     display: block;
   }
   .programacion .programacion-dia-container #carrusel-sabado .carousel-inner .carousel-item .escenario, .programacion .programacion-dia-container #carrusel-domingo .carousel-inner .carousel-item .escenario {
-    background-color: darkslateblue;
+    background-color: linear-gradient(to top, #640D5F, #ffc234);
     color: #ffffff;
     padding: 1.2rem;
     border-radius: 16px;
@@ -965,7 +973,7 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
   }
   .entradas #carrusel-entradas .carousel-inner .carousel-item .entrada {
     flex: 1;
-    background-color: darkslateblue;
+    background-color: linear-gradient(to top, #640D5F, #ffc234);
     border-radius: 16px;
     color: #ffffff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
