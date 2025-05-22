@@ -2,6 +2,7 @@
 @use "variables" as *;
 @use "base" as *;
 @use "animaciones" as *;
+@use "sass:color";
 
 //ENTRADAS
 .entradas {
@@ -10,7 +11,6 @@
         @include flex-container(row, space-between, stretch);
         gap: 2rem;
 
-        
         .entrada {
             @include cards($color-tarjetas, 2rem);
             @include flex-container(column, space-between, none);
@@ -19,9 +19,11 @@
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-            &:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            &:hover, &:focus-within {
+              transform: translateY(-5px);
+              outline: 2px solid $color-secundario;
+              outline-offset: 4px;
+              box-shadow: 0 6px 16px rgba(0,0,0,0.2), 0 0 15px color.adjust(#5e5e5e, $lightness: 20%);
             }
 
             h2 {

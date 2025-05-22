@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bruma Fest – Contacto</title>
+
+    <title>Bruma Fest | Contacto</title>
+
+    <meta name="description" content="Contactanos por consultas sobre entradas, programación o cualquier duda que tengas sobre Bruma Fest. ¡Queremos ayudarte!">
+    <meta name="keywords" content="BrumaFest, contacto, ayuda, entradas, programación, consulta, festival">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
@@ -11,7 +16,7 @@
 
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark">
+        <nav class="navbar navbar-expand-md navbar-dark" role="navigation" aria-label="Menú principal Bruma Fest">
             <div class="container-fluid header-container">
                 <a class="navbar-brand" href="../index.html">Bruma Fest</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -35,12 +40,12 @@
     <main class="contacto">
         <section>
             <h1>Contacto</h1>
-            <p>¿Tenés alguna duda, consulta o simplemente querés decirnos algo? Escribinos por acá y te damos una mano. En Bruma Fest queremos que disfrutes al máximo, así que no te quedes con la duda. ¡Estamos para ayudarte!</p>
+            <p>¿Tenés alguna duda, consulta o simplemente querés decirnos algo? Escribinos por acá y te damos una mano. En <strong>Bruma Fest</strong> queremos que disfrutes al máximo, así que no te quedes con la duda. ¡Estamos para ayudarte!</p>
         </section>
 
         <section class="formulario">
             <form>
-                <h2>Escribinos tu consulta</h2>
+                <h2>Envianos tu consulta</h2>
                 <div>
                     <label for="nombre">Nombre completo:</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Ingresá tu nombre completo" required>
@@ -62,7 +67,7 @@
                     <label for="mensaje">Mensaje:</label>
                     <textarea id="mensaje" name="mensaje" placeholder="Escribí aquí tu mensaje..." required></textarea>
                 </div>
-                <button type="submit">Enviar consulta</button>
+                <button type="submit" aria-label="Enviar consulta">Enviar consulta</button>
             </form>
         </section>
 
@@ -71,7 +76,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-container">
-            <h2 class="footer-title">Bruma Fest</h2>
+            <a class="footer-title" href="../index.html">Bruma Fest</a>
             
             <div class="footer-columns">
                 <div class="footer-column">

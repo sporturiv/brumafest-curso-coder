@@ -2,6 +2,7 @@
 @use "variables" as *;
 @use "base" as *;
 @use "animaciones" as *;
+@use "sass:color";
 
 //PROGRAMACIÓN
 .programacion {
@@ -42,9 +43,10 @@
                 padding-bottom: 0.4rem;
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-                &:hover {
+                &:hover, &:focus-within {
                     transform: translateY(-5px);
-                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                    outline-offset: 4px;
+                    box-shadow: 0 6px 16px rgba(0,0,0,0.2), 0 0 15px color.adjust(#5e5e5e, $lightness: 20%);
                 }
             
                 h4 {

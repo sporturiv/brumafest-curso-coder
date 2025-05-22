@@ -47,13 +47,15 @@ button {
   color: #000000;
   border: none;
   border-radius: 8px;
-  padding: 12px 24px;
+  padding: 0.75rem 1.5rem;
   font-size: 1rem;
   cursor: pointer;
   transition: box-shadow 0.3s ease;
 }
-button:hover {
-  box-shadow: 0 0 15px #ffb300, 0 0 30px rgb(255, 209.4, 102);
+button:hover, button:focus {
+  transform: translateY(-2px);
+  outline-offset: 4px;
+  box-shadow: 0 0 15px #5e5e5e, 0 0 30px #919191;
 }
 
 body {
@@ -132,7 +134,9 @@ footer .footer-container {
 }
 footer .footer-container .footer-title {
   font-family: "Bebas Neue", sans-serif;
-  margin-bottom: 1.5rem;
+  font-size: 4rem;
+  color: #ffffff;
+  text-decoration: none;
 }
 footer .footer-container .footer-columns {
   display: flex;
@@ -355,9 +359,10 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
   padding-bottom: 0.4rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.programacion .programacion-dia-container .escenario-container .escenario:hover {
+.programacion .programacion-dia-container .escenario-container .escenario:hover, .programacion .programacion-dia-container .escenario-container .escenario:focus-within {
   transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  outline-offset: 4px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2), 0 0 15px #919191;
 }
 .programacion .programacion-dia-container .escenario-container .escenario h4 {
   margin-bottom: 24px;
@@ -519,9 +524,11 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.entradas .entradas-container .entrada:hover {
+.entradas .entradas-container .entrada:hover, .entradas .entradas-container .entrada:focus-within {
   transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  outline: 2px solid #ffb300;
+  outline-offset: 4px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2), 0 0 15px #919191;
 }
 .entradas .entradas-container .entrada h2 {
   margin-bottom: 0;
@@ -584,7 +591,6 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
   margin-bottom: 6rem;
 }
 .contacto .formulario {
-  animation: fadeInUp 0.6s ease-out both;
   background-color: darkslateblue;
   padding: 2rem;
   border-radius: 10px;
@@ -620,6 +626,11 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
   font-size: 1rem;
   font-family: "Inter", sans-serif;
   font-style: italic;
+  transition: outline-color 0.3s ease;
+}
+.contacto .formulario form div input:focus, .contacto .formulario form div select:focus, .contacto .formulario form div textarea:focus {
+  outline: 2px solid #ffb300;
+  outline-offset: 2px;
 }
 .contacto .formulario form div select {
   font-style: normal;
@@ -629,12 +640,6 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
 }
 .contacto .formulario form button {
   align-self: flex-start;
-  font-weight: bold;
-  border: none;
-  border-radius: 4px;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  cursor: pointer;
 }
 
 @media (max-width: 767px) {
@@ -1082,6 +1087,7 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
   }
   footer .footer-container .footer-title {
     margin-bottom: 1rem;
+    font-size: 3rem;
   }
   footer .footer-container .footer-columns {
     display: flex;

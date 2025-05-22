@@ -625,7 +625,8 @@ $bp-tablet-end: $bp-tablet + 1px ;
         padding: 2rem 1.5rem;
         .footer-container {
             .footer-title { 
-                margin-bottom: 1rem; 
+                margin-bottom: 1rem;
+                font-size: 3rem;
             }
     
             .footer-columns {

@@ -64,7 +64,9 @@ footer {
     
         .footer-title {
             font-family: $tipografia-titulos;
-            margin-bottom: 1.5rem;
+            font-size: 4rem;
+            color: $color-blanco;
+            text-decoration: none;
         }
     
         .footer-columns {

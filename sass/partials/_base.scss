@@ -36,14 +36,17 @@ button {
   color: $color-negro;
   border: none;
   border-radius: 8px;
-  padding: 12px 24px;
+  padding: 0.75rem 1.5rem;
   font-size: 1rem;
   cursor: pointer;
   transition: box-shadow 0.3s ease;
 
-  &:hover {
-    box-shadow: 0 0 15px $color-secundario, 0 0 30px color.adjust($color-secundario, $lightness: 20%);
+  &:hover, &:focus {
+    transform: translateY(-2px);
+    outline-offset: 4px;
+    box-shadow: 0 0 15px #5e5e5e, 0 0 30px color.adjust(#5e5e5e, $lightness: 20%);
   }
+
 }
 
 //Body y secciones

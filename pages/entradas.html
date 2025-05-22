@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bruma Fest – Entradas</title>
+
+    <title>Bruma Fest | Entradas</title>
+
+    <meta name="description" content="Entradas para Bruma Fest: compra tu pase de un día o full pass, con acceso a escenarios, food trucks y merchandising exclusivo.">
+    <meta name="keywords" content="BrumaFest, entradas, festival, indie, música, Argentina, fullpass, comprar, accesos">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
@@ -11,7 +16,7 @@
 
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark">
+        <nav class="navbar navbar-expand-md navbar-dark" role="navigation" aria-label="Menú principal Bruma Fest">
             <div class="container-fluid header-container">
                 <a class="navbar-brand" href="../index.html">Bruma Fest</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -49,7 +54,7 @@
                         <li>Zona de descanso</li>
                     </ul>
                 </div>
-                <button>Comprar entradas</button>
+                <button aria-label="Comprar entradas para sábado 26 de agosto">Comprar entradas</button>
             </div>
 
             <div class="entrada domingo">
@@ -63,7 +68,7 @@
                         <li>Zona de descanso</li>
                     </ul>
                 </div>
-                <button>Comprar entradas</button>
+                <button aria-label="Comprar entradas para domingo 27 de agosto">Comprar entradas</button>
             </div>
 
             <div class="entrada full-pass">
@@ -78,7 +83,7 @@
                         <li>Merchandising exclusivo</li>
                     </ul>
                 </div>
-                <button>Comprar entradas</button>
+                <button aria-label="Comprar entradas Full Pass para sábado 26 y domingo 27 de agosto">Comprar entradas</button>
             </div>
         </section>
 
@@ -135,11 +140,11 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carrusel-entradas" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carrusel-entradas" data-bs-slide="prev" aria-label="Anterior entrada">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carrusel-entradas" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
+            <button class="carousel-control-next" type="button" data-bs-target="#carrusel-entradas" data-bs-slide="next" aria-label="Siguiente entrada">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </button>
         </div> 
 
@@ -205,7 +210,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-container">
-            <h2 class="footer-title">Bruma Fest</h2>
+            <a class="footer-title" href="../index.html">Bruma Fest</a>
             
             <div class="footer-columns">
                 <div class="footer-column">
