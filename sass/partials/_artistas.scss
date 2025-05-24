@@ -58,7 +58,7 @@
 
             p  { 
                 margin-bottom: 1rem; 
-                font-size: 1rem;
+                font-size: 1.2rem;
                 text-shadow: none;
             }
 
@@ -79,7 +79,7 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
-        padding: 2rem 0;
+        padding: 1rem 0;
 
         .artista-mini {
             @include flex-container(row, flex-start, center);
@@ -87,8 +87,9 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
 
             &:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                transform: translateY(-3px);
+                box-shadow: $sombra-media;
+                border-radius: 8px;
             }
 
             img {

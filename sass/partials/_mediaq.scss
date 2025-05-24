@@ -402,6 +402,10 @@ $bp-tablet-end: $bp-tablet + 1px ;
                 gap: 1rem;
 
                 .artista{
+                    p  { 
+                        font-size: 1rem;
+                    }
+                    
                     &:nth-child(1) {
                         grid-column: 1 / -1;
                         .imagen {
