@@ -217,7 +217,7 @@ $bp-tablet-end: $bp-tablet + 1px ;
                 .carousel-inner {
                     .carousel-item {
                         .escenario {
-                            background-color: $color-tarjetas;
+                            background-color: $gradiente-principal;
                             color: $color-blanco;
                             padding: 1.2rem;
                             border-radius: 16px;
@@ -453,7 +453,7 @@ $bp-tablet-end: $bp-tablet + 1px ;
                 .carousel-item {
                     .entrada {
                         flex: 1;
-                        background-color: $color-tarjetas;
+                        background-color: $gradiente-principal;
                         border-radius: 16px;
                         color: $color-blanco;
                         box-shadow: $sombra-baja;

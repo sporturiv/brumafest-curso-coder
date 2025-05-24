@@ -12,11 +12,11 @@
         gap: 2rem;
 
         .entrada {
-            @include cards($color-tarjetas, 2rem);
+            @include cards($gradiente-principal, 2rem);
             @include flex-container(column, space-between, none);
             flex: 1;
             color: $color-blanco;
-            text-shadow: $color-negro 3px 3px;
+            text-shadow: $color-negro 2px 2px;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
 
@@ -67,8 +67,6 @@
             button {
                 margin-top: auto;
                 width: 100%;
-                background-color: $color-secundario;
-                color: $color-negro;
             }
         }
     }

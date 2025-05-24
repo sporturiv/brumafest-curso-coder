@@ -6,7 +6,7 @@
 //INDEX
 .index {
     .destacado {
-        background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('../medios/fotos/banner-principal.jpg');
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.4)), url('../medios/fotos/banner-principal.jpg');
         height: 60vh;
         background-size: cover;
         background-position: center;
@@ -16,10 +16,20 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        text-shadow: $color-negro 3px 3px;
+        text-shadow: $color-negro 0.5px 0.5px 2px;
         
         h1 {
             font-size: 6rem;
+        }
+
+        button {
+            background-color: $color-acento;
+            color: $color-blanco;
+
+            &:hover, &:focus {
+                background-color: $color-secundario;
+                color: $color-negro;
+            }
         }
     }
 
@@ -33,19 +43,16 @@
                 margin: 0 1rem;
         
                 .fecha {
-                    background-color: $color-tarjetas;
-                    border-radius: 8px;
+                    @include cards($background: $gradiente-principal, $padding: 1rem);
                     color: $color-blanco;
-                    text-shadow: $color-negro 1px 1px;
-                    padding: 24px;
+                    text-shadow: $color-negro 2px 2px;
                     width: 100%;
                     text-align: center;
-                    box-shadow: $sombra-baja;
                     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+                  
                     &:hover {
-                        transform: translateY(-5px);
-                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                      transform: translateY(-3px) scale(1.01);
+                      box-shadow: $sombra-alta;
                     }
                 
                     h3 {
@@ -67,7 +74,7 @@
             .mapa {
                 width: 100%;
                 border-radius: 8px;
-                box-shadow: $sombra-baja;
+                box-shadow: $sombra-media;
             }
         }
     }
@@ -76,7 +83,7 @@
         .galeria-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(2, 320px);
+            grid-template-rows: repeat(2, 200px);
             gap: 1rem;
             margin: 2.5rem 0;
       

@@ -30,7 +30,7 @@
             @include flex-container(column, space-between, none);
             flex: 1 1 calc(33% - 2rem);
             color: $color-blanco;
-            text-shadow: $color-negro 3px 3px;
+            text-shadow: $color-negro 2px 2px;
             text-align: left;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
 

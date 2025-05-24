@@ -137,13 +137,14 @@ footer {
                             }
                 
                             .newsletter-button {
-                                padding: 8px 10px;
-                                border: none;
-                                background-color: $color-secundario;
-                                color: $color-negro;
-                                border-radius: 4px;
-                                cursor: pointer;
                                 font-size: 0.8rem;
+                                border-radius: 4px;
+
+
+                                &:hover, &:focus {
+                                    background-color: $color-acento;
+                                    transform: none;
+                                }
                             }
                         }
                     }

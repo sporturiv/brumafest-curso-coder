@@ -31,20 +31,21 @@ input {
 }
 
 button {
-  background-color: $color-rosa;
+  background-color: $color-secundario;
   font-weight: bold;
-  color: $color-blanco;
+  color: $color-negro;
   border: none;
   border-radius: 8px;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
-  transition: box-shadow 0.3s ease;
+  transition: background-color 0.3s ease;
 
   &:hover, &:focus {
-    transform: translateY(-2px);
-    outline-offset: 4px;
-    box-shadow: 0 0 15px #5e5e5e, 0 0 30px color.adjust(#5e5e5e, $lightness: 20%);
+    background-color: $color-principal;
+    color: $color-blanco;
+    transform: translateY(-2px) scale(1.02);
   }
 
 }
@@ -70,7 +71,7 @@ section {
 }
 
 // Mixins
-@mixin cards ( $background: $color-tarjetas, $padding: 1.5rem, $radio: 10px, $sombra: $sombra-baja ) {
+@mixin cards ( $background: $gradiente-principal, $padding: 1.5rem, $radio: 10px, $sombra: $sombra-baja ) {
   background: $background;
   padding: $padding;
   border-radius: $radio;
@@ -83,4 +84,3 @@ section {
   justify-content: $justify;
   align-items: $align;
 }
-

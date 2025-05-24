@@ -6,17 +6,18 @@ $tipografia-principal: 'Inter', sans-serif;
 $tipografia-titulos:  'Bebas Neue', sans-serif;
 
 // Colores
-$color-principal: #640D5F;
-$color-secundario: #ffb300;
+$color-principal: #5C0B5A;
+$color-secundario: #FFC107;
+$color-acento: #cb1350; 
 $color-fondo: #f3f4f8;
 $color-negro: #000000;
 $color-blanco: #ffffff;
-$color-rosa: rgb(217, 15, 123);
 $color-fondo-violeta: rgb(203, 199, 238);
-$color-tarjetas: linear-gradient(to top, $color-principal, #ffc234);
 $color-bordes: #cccccc;
+$gradiente-principal: linear-gradient(145deg, $color-principal, $color-acento);
 
 // Sombras
 $sombra-hover: 0 0 10px rgba(0, 0, 0, 0.3);
 $sombra-baja:  0 4px 12px rgba(0, 0, 0, 0.15);
+$sombra-media: 0 6px 16px rgba(0, 0, 0, 0.18);
 $sombra-alta:  0 8px 20px rgba(0, 0, 0, 0.25);
