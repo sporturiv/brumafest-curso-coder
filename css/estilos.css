@@ -474,7 +474,7 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 .artistas .artistas-dia-container .artistas-grid .artista-mini {
   display: flex;
@@ -810,10 +810,11 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
     display: block;
   }
   .programacion .programacion-dia-container #carrusel-sabado .carousel-inner .carousel-item .escenario, .programacion .programacion-dia-container #carrusel-domingo .carousel-inner .carousel-item .escenario {
-    background-color: linear-gradient(145deg, #5C0B5A, #cb1350);
-    color: #ffffff;
+    background: linear-gradient(145deg, #5C0B5A, #cb1350);
     padding: 1.2rem;
     border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    color: #ffffff;
     padding-bottom: 0.1rem;
   }
   .programacion .programacion-dia-container #carrusel-sabado .carousel-inner .carousel-item .escenario h4, .programacion .programacion-dia-container #carrusel-domingo .carousel-inner .carousel-item .escenario h4 {
@@ -829,7 +830,7 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
     padding: 0.4rem 0.5rem;
     display: flex;
     flex-direction: column;
-    background-color: rgb(202, 219, 252);
+    background-color: rgb(252, 227, 193);
     color: #000000;
     border-radius: 10px;
     margin-bottom: 8px;
@@ -985,16 +986,16 @@ footer .footer-container .footer-bottom a:hover, footer .footer-container .foote
     padding: 0 1.5rem;
   }
   .entradas #carrusel-entradas .carousel-inner .carousel-item .entrada {
-    flex: 1;
-    background-color: linear-gradient(145deg, #5C0B5A, #cb1350);
-    border-radius: 16px;
-    color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(145deg, #5C0B5A, #cb1350);
     padding: 1.2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
+    flex: 1;
+    color: #ffffff;
   }
   .entradas #carrusel-entradas .carousel-inner .carousel-item .entrada h2 {
     margin-bottom: 0;

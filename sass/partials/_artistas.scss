@@ -79,7 +79,7 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
-        padding: 1rem 0;
+        padding: 2rem 0;
 
         .artista-mini {
             @include flex-container(row, flex-start, center);

@@ -217,10 +217,8 @@ $bp-tablet-end: $bp-tablet + 1px ;
                 .carousel-inner {
                     .carousel-item {
                         .escenario {
-                            background-color: $gradiente-principal;
+                            @include cards($gradiente-principal, 1.2rem, 16px);
                             color: $color-blanco;
-                            padding: 1.2rem;
-                            border-radius: 16px;
                             padding-bottom: 0.1rem;
                     
                             h4 {
@@ -237,13 +235,13 @@ $bp-tablet-end: $bp-tablet + 1px ;
                                     padding: 0.4rem 0.5rem;
                                     display: flex;
                                     flex-direction: column;
-                                    background-color: rgb(202, 219, 252);
+                                    background-color: rgb(252, 227, 193);
                                     color: $color-negro;
                                     border-radius: 10px;
                                     margin-bottom: 8px;
                         
                                     &:nth-child(odd) {
-                                        background-color:rgb(249, 240, 255) ;
+                                        background-color:rgb(249, 240, 255);
                                         border-radius: 8px;
                                         color: $color-negro;
                                         padding: 0.4rem 0.5rem;
@@ -456,16 +454,13 @@ $bp-tablet-end: $bp-tablet + 1px ;
             .carousel-inner {
                 .carousel-item {
                     .entrada {
-                        flex: 1;
-                        background-color: $gradiente-principal;
-                        border-radius: 16px;
-                        color: $color-blanco;
-                        box-shadow: $sombra-baja;
-                        padding: 1.2rem;
+                        @include cards($gradiente-principal, 1.2rem, 16px, $sombra-baja);
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
                         text-align: center;
+                        flex: 1;
+                        color: $color-blanco;
             
                         h2 {
                             margin-bottom: 0;
